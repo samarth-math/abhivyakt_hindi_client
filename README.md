@@ -1,6 +1,6 @@
 # hindiclient
 
-> vue client for abhivyakt
+> Vue Client for abhivyakt
 
 ## Build Setup
 
