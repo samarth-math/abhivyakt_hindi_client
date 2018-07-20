@@ -4,38 +4,14 @@
             {{sectionHeader}}
         </div>
         <div class="col-12 ">
-            <div class="row space-bottom-md">
+            <div v-for="(i, rowIndex) in numberOfRows" :key="rowIndex" class="row space-bottom-md">
                 <page-section-tile-one
-                v-for="(art, index) in ListOfArts"
-                :key="index" 
-                :artType="kahani" 
+                v-for="(art, tileIndex) in ListOfArts.slice(rowIndex*rowSize, (rowIndex+1)*rowSize)"
+                :key = tileIndex
+                artType="kahani" 
                 :artTitle="art.title" 
-                :artText="art.content">
-                </page-section-tile-one>
+                :artText="art.authorName"/>
 
-            </div>
-            <div class="row ">
-                <div class="tile col">
-                    <span class="type">कहानी</span>
-                    <br>
-                    <span class="title">Tobha Tek Singh</span>
-                    <br>
-                    <span class="text">Saadat Hasan Manto</span>
-                </div>
-                <div class="tile col">
-                    <span class="type">कहानी</span>
-                    <br>
-                    <span class="title">Tobha Tek Singh</span>
-                    <br>
-                    <span class="text">Saadat Hasan Manto</span>
-                </div>
-                <div class="tile col no-border">
-                    <span class="type">कहानी</span>
-                    <br>
-                    <span class="title">Tobha Tek Singh</span>
-                    <br>
-                    <span class="text">Saadat Hasan Manto</span>
-                </div>
             </div>
         </div>
         <div v-if="withSectionEnd" class="col-12 section-end">
@@ -62,9 +38,9 @@ export default {
         },
         artList: {
             type:Array,
-            //required: true
+            required: true
         },
-        listLengthDisplayed: {
+        totalListElementsDisplayed: {
             type: Number,
             default: -1
         },
@@ -80,15 +56,16 @@ export default {
     },
     computed: {
         numberOfRows: function() {
-            if (this.listLengthDisplayed!=-1 && this.listLengthDisplayed>this.rowSize) {
-                return this.listLength/this.rowSize
+            if (this.totalListElementsDisplayed!=-1) {
+                return Math.ceil(Math.max(this.totalListElementsDisplayed*1.0/this.rowSize, 1))
+                // Basically for 1,2,3 -> 1 row
+                // for 4-6 -> 2 rows and so on
+            }
+            else {
+                return Math.ceil(Math.max(this.artList.length*1.0/this.rowSize, 1))
             }
         }
     },
 }
 </script>
-
-<style scoped>
-</style>
-
 
