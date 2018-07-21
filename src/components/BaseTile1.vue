@@ -1,5 +1,5 @@
 <template>
-    <div class="tile col">
+    <div class="tile col-sm" :class="{'no-border':isLastTile}">
         <span class="type">{{artType}}</span>
         <br>
         <span class="title">{{artTitle}}</span>
@@ -10,14 +10,10 @@
 
 <script>
 export default {
-    name: 'PageSectionTileOne',
+    name: 'BaseTile1',
     props: {
         artType: {
             type: String,
-            required: true,
-            /*validator: function(value) { // Can validate the type of objects tile can hold
-                return('kavita')
-            }*/
         },
         artTitle: {
             type: String,
@@ -26,6 +22,10 @@ export default {
         artText: {
             type: String,
             required: true
+        },
+        isLastTile: {
+            type: Boolean,
+            default: false
         }
     }
 }
@@ -44,6 +44,9 @@ export default {
 }
 .tile .text {
     font-size: 0.8rem;
+}
+.no-border {
+    border: 0px;
 }
 
 </style>

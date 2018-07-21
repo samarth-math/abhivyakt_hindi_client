@@ -1,8 +1,7 @@
 <template>
     <div id="app">
         <navigation-bar/>
-        <div class="container">
-
+        <div class="container space-top-lg">
             <router-view/>
         </div>
     </div>

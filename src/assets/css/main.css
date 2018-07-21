@@ -47,67 +47,18 @@ h3 {
     color: #666;
 }
 
-/****Section******/
-.section-margin {
-    margin: 1rem 0;
-}
 
-.section-heading {
-    border-bottom: 1.5px solid var(--golden);
-    border-top: 1.5px solid var(--golden);
-    margin: 1rem 0rem;
-    padding: 2px 0px;
-    text-align: center;
-}
-
-.section-single-line-heading {
-    border-bottom: 1.5px solid var(--golden);
-    text-align: center;
-    margin: 1rem 0rem;
-    padding: 2px 0px;
-}
-
-
-.section-end {
-    margin-top: 10px;
-    height: 10px;
-    border-bottom: 1.5px solid var(--golden);
-    border-top: 1.5px solid var(--golden);
-    margin-bottom: 10px;
-}
-
+/**Footer**/
 .page-end {
     height: 10px;
     border-bottom: 1.5px solid var(--footer-black);
     border-top: 1.5px solid var(--footer-black);
 }
-/****Section******/
-
-.lightbox {
-    border: 6px solid var(--lightgrey);
-    color: var(--grey);
-    margin: 5px;
-}
-
-.darkbox {
-    background-color: var(--grey);
-    color: #fff;
-    margin: 5px;
-}
+/**Footer**/
 
 img.icon {
     border-radius: 50%;
     max-height: 120px;
-}
-
-.pink-break {
-    margin-top: 5px;
-    height: 40px;
-    background-color: var(--pink);
-    color: #fff;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    width: 100vw;
 }
 
 .genre-tile {
@@ -122,30 +73,7 @@ img.icon {
 .dark {
     background-color: var(--midgrey);
 }
-/********IMG box and text ************************
-usage : create image box put image in it, put textbox in it
-might need to define max-width-600 kind of classes depending on image size or
-textbox tends to spill over
-*/
-.img-box {
-    position: relative;
-}
 
-.img-box img {
-    max-width: 100%;
-}
-
-.img-box .text-box {
-    padding-left: 5px;
-    position: absolute;
-    bottom: 0px;
-    height: 2rem;
-    background-color: black;
-    color: white;
-    width: 100%;
-    opacity: 0.6;
-}
-/********IMG box and text ************************/
 
 /* --- End reusable elements ---*/
 
@@ -194,10 +122,6 @@ textbox tends to spill over
     vertical-align: top;
 }
 
-.max-width-600 {
-    max-width: 600px;
-}
-
 .float-left {
     float: left;
 }
@@ -216,5 +140,9 @@ textbox tends to spill over
 
 .position-relative {
     position: relative;
+}
+
+.bold {
+    font-weight: bold
 }
 /* ---End reusable primitives ---*/
