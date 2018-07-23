@@ -32,19 +32,20 @@
         </div>
         <page-section-with-tile1
         section-header="SpotLight"
-        :art-list="poemArray"
         :with-section-end="true"
-        :num-rows="2" />
+        :art-list="poemArray"
+        :num-rows="2"
+        />
         <base-pink-ribbon>
             Some stuff here
         </base-pink-ribbon>
 
         <page-section-with-tile2
         section-header="Featured Poems"
-        :art-list="poemArray"
         :with-section-end="true"
         :num-rows="1"
-        :row-size="5"/>
+        :row-size="5"
+        from-location="/api/featured/kavita"/>
         
         
     </div>
@@ -55,16 +56,12 @@ import PageSectionWithTile1 from "./PageSectionWithTile1"
 import PageSectionWithTile2 from "./PageSectionWithTile2"
 import BaseImageWithText from "./BaseImageWithText"
 import BasePinkRibbon from "./BasePinkRibbon"
-import featuredObject from "../mixins/featuredObject.js"
 export default {
     components: {
         PageSectionWithTile1,
         PageSectionWithTile2,
         BaseImageWithText,
         BasePinkRibbon
-    },
-    mixins: {
-        featuredObject
     },
     data() {
         return {

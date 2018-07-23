@@ -19,14 +19,12 @@
 <script>
 import BaseTile1 from './BaseTile1'
 import BasePageSection from './BasePageSection'
-import featuredObject from '../mixins/featuredObject.js'
 export default {
     name:'PageSection',
     components: {
         BaseTile1,
         BasePageSection
     },
-    mixins:[featuredObject],
     props: {
         sectionHeader: {
             type: String,
@@ -46,9 +44,6 @@ export default {
         numRows: {
             type: Number,
             default: -1,
-        },
-        fromLocation: {
-            type: String
         }
     },
     computed: {
