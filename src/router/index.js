@@ -16,6 +16,6 @@ export default new Router({
         path: '/',
         name: 'IndexPage',
         component: IndexPage
-      }
+    }
   ]
 })

@@ -1,8 +1,8 @@
 var featuredObject = {
     data: function() {
         return {
-            loaded: [],
-            current: 0,
+            loadedContent: [],
+            currentIndex: 0,
             errors: []
         }
     },
@@ -11,14 +11,14 @@ var featuredObject = {
             axios
                 .get(apiEndpoint)
                 .then(response => {
-                    this.loaded = response.data.content
+                    this.loadedContent = response.data.content
                 })
                 .catch(e => {
                     this.errors.push(e)
                 });
         },
         next: function() {
-            if (this.current + 1 < this.loaded.length) {
+            if (this.current + 1 < this.loadedContent.length) {
                 this.current += 1
             }
         },

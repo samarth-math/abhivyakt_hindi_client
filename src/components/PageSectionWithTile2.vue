@@ -5,7 +5,7 @@
         >
             <div v-for="(i, rowIndex) in numberOfRows" :key="rowIndex" class="row" :class="{'space-bottom-md': isNotLastRow(rowIndex)}">
                 <base-tile2
-                v-for="(art, tileIndex) in loaded.slice(rowIndex*rowSize, (rowIndex+1)*rowSize)"
+                v-for="(art, tileIndex) in loadedContent.slice(rowIndex*rowSize, (rowIndex+1)*rowSize)"
                 :key = tileIndex
                 :artTitle="art.title"
                 :artText="art.authorName"
@@ -43,7 +43,7 @@ export default {
         },
         numRows: {
             type: Number,
-            default: -1,
+            default: Number.MAX_SAFE_INTEGER,
         },
         fromLocation: {
             type: String
@@ -51,21 +51,22 @@ export default {
     },
     computed: {
         numberOfRows: function() {
-            if(this.numRows>0) {
-                return Math.min(this.numRows, Math.ceil(this.loaded.length*1.0/this.rowSize))
-            }
-            return Math.ceil(this.loaded.length*1.0/this.rowSize)
+            return Math.min(this.numRows, Math.ceil(this.loadedContent.length*1.0/this.rowSize))
+        },
+        sizeOfRow: function() {
+            return Math.min(this.rowSize, Math.ceil(this.loadedContent.length))
         }
     },
     created() {
         this.fetchContent(this.fromLocation)
+        console.log(this.loadedContent.length)
     },
     methods: {
         isNotLastRow: function(value) {
             return value!=this.numberOfRows-1
         },
         isLastTile: function(value) {
-            return value==this.rowSize-1
+            return value==this.sizeOfRow-1
         }
     }
 }
