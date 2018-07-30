@@ -12,6 +12,7 @@ var featuredObject = {
                 .get(apiEndpoint)
                 .then(response => {
                     this.loadedContent = response.data.content
+                    console.log(response.data.content)
                 })
                 .catch(e => {
                     this.errors.push(e)

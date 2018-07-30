@@ -4,7 +4,7 @@
         :with-section-end=withSectionEnd
         >
             <div v-for="(i, rowIndex) in numberOfRows" :key="rowIndex" class="row" :class="{'space-bottom-md': isNotLastRow(rowIndex)}">
-                <base-tile1
+                <art-tile1
                 v-for="(art, tileIndex) in artList.slice(rowIndex*rowSize, (rowIndex+1)*rowSize)"
                 :key = tileIndex
                 artType="kahani"
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import BaseTile1 from './BaseTile1'
+import ArtTile1 from './ArtTile1'
 import BasePageSection from './BasePageSection'
 export default {
     name:'PageSection',
     components: {
-        BaseTile1,
+        ArtTile1,
         BasePageSection
     },
     props: {

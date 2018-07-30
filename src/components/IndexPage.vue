@@ -42,11 +42,15 @@
 
         <page-section-with-tile2
         section-header="Featured Poems"
-        :with-section-end="true"
         :num-rows="1"
         :row-size="5"
         from-location="/api/featured/kavita"/>
         
+        <page-section-with-tile2
+        section-header="Featured Kahaniyaan"
+        :num-rows="1"
+        :row-size="5"
+        from-location="/api/featured/kahani"/>
         
     </div>
 </template>

@@ -1,16 +1,14 @@
 <template>
     <div class="tile col-sm" :class="{'no-border':isLastTile}">
-        <span class="type">{{artType}}</span>
-        <br>
-        <span class="title">{{artTitle}}</span>
-        <br>
-        <span class="text">{{artText}}</span>
+        <div class="col-sm title align-self-start">{{artTitle}}</div>
+        <br/>
+        <div class="col-sm text align-self-end">{{artText}}</div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'BaseTile1',
+    name: 'ArtTile2',
     props: {
         artType: {
             type: String,
@@ -34,10 +32,6 @@ export default {
 <style scoped>
 .tile {
     border-right: 1.5px solid var(--golden);
-}
-.tile .type {
-    color: var(--pink);
-    font-size: 1rem;
 }
 .tile .title {
     font-size: 1rem;

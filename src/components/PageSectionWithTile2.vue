@@ -4,7 +4,7 @@
         :with-section-end=withSectionEnd
         >
             <div v-for="(i, rowIndex) in numberOfRows" :key="rowIndex" class="row" :class="{'space-bottom-md': isNotLastRow(rowIndex)}">
-                <base-tile2
+                <art-tile2
                 v-for="(art, tileIndex) in loadedContent.slice(rowIndex*rowSize, (rowIndex+1)*rowSize)"
                 :key = tileIndex
                 :artTitle="art.title"
@@ -17,14 +17,14 @@
 </template>
 
 <script>
-import BaseTile2 from './BaseTile2'
+import ArtTile2 from './ArtTile2'
 import BasePageSection from './BasePageSection'
 import featuredObject from '../mixins/featuredObject.js'
 
 export default {
     name:'PageSection',
     components: {
-        BaseTile2,
+        ArtTile2,
         BasePageSection
     },
     mixins:[featuredObject],
