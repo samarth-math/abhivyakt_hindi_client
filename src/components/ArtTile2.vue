@@ -10,16 +10,12 @@
 export default {
     name: 'ArtTile2',
     props: {
-        artType: {
-            type: String,
-        },
         artTitle: {
             type: String,
             required: true
         },
         artText: {
             type: String,
-            required: true
         },
         isLastTile: {
             type: Boolean,

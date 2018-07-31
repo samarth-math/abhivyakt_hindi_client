@@ -4,12 +4,11 @@
         :with-section-end=withSectionEnd
         >
             <div v-for="(i, rowIndex) in numberOfRows" :key="rowIndex" class="row" :class="{'space-bottom-md': isNotLastRow(rowIndex)}">
-                <art-tile2
+                <component
                 v-for="(art, tileIndex) in loadedContent.slice(rowIndex*rowSize, (rowIndex+1)*rowSize)"
-                :key = tileIndex
-                :artTitle="art.title"
-                :artText="art.authorName"
-                :is-last-tile="isLastTile(tileIndex)"/>
+                :key="tileIndex"
+                :is="tileComponent"
+                v-bind="tileProperties(art, tileIndex)"/>
             </div>
             <div class="row justify-content-center">more poems here
             </div>
@@ -17,14 +16,23 @@
 </template>
 
 <script>
-import ArtTile2 from './ArtTile2'
 import BasePageSection from './BasePageSection'
 import featuredObject from '../mixins/featuredObject.js'
 
 export default {
     name:'PageSection',
+    data: function() {
+        return {
+            tileDef: {
+                1:{
+                    
+                }
+            }
+
+        }
+
+    },
     components: {
-        ArtTile2,
         BasePageSection
     },
     mixins:[featuredObject],
@@ -45,6 +53,13 @@ export default {
             type: Number,
             default: Number.MAX_SAFE_INTEGER,
         },
+        tileType: {
+            type:Number,
+            default: 2,
+            validator: function(value) {
+                return [1,2].indexOf(value) !== -1
+            }
+        },
         fromLocation: {
             type: String
         }
@@ -53,8 +68,11 @@ export default {
         numberOfRows: function() {
             return Math.min(this.numRows, Math.ceil(this.loadedContent.length*1.0/this.rowSize))
         },
-        sizeOfRow: function() {
+        sizeOfRow() {
             return Math.min(this.rowSize, Math.ceil(this.loadedContent.length))
+        },
+        tileComponent() {
+            return () => import(`./ArtTile`+this.tileType)
         }
     },
     created() {
@@ -67,6 +85,25 @@ export default {
         },
         isLastTile: function(value) {
             return value==this.sizeOfRow-1
+        },
+        tileProperties: function(art, tileIndex) {
+            switch(this.tileType) {
+                case 1:
+                    return {
+                        artTitle: art.title,
+                        artText: art.authorName,
+                        artType: art.type,
+                        isLastTile: this.isLastTile(tileIndex)
+                    }
+                    break;
+                case 2:
+                    return {
+                        artTitle: art.title,
+                        artText: art.authorName,
+                        isLastTile: this.isLastTile(tileIndex)
+                    }
+            }
+            
         }
     }
 }

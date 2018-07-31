@@ -40,16 +40,18 @@
             Some stuff here
         </base-pink-ribbon>
 
-        <page-section-with-tile2
+        <page-section-with-tile
         section-header="Featured Poems"
         :num-rows="1"
         :row-size="5"
+        :tile-type="2"
         from-location="/api/featured/kavita"/>
         
-        <page-section-with-tile2
+        <page-section-with-tile
         section-header="Featured Kahaniyaan"
         :num-rows="1"
         :row-size="5"
+        :tile-type="2"
         from-location="/api/featured/kahani"/>
         
     </div>
@@ -57,13 +59,13 @@
 
 <script>
 import PageSectionWithTile1 from "./PageSectionWithTile1"
-import PageSectionWithTile2 from "./PageSectionWithTile2"
+import PageSectionWithTile from "./PageSectionWithTile"
 import BaseImageWithText from "./BaseImageWithText"
 import BasePinkRibbon from "./BasePinkRibbon"
 export default {
     components: {
         PageSectionWithTile1,
-        PageSectionWithTile2,
+        PageSectionWithTile,
         BaseImageWithText,
         BasePinkRibbon
     },
