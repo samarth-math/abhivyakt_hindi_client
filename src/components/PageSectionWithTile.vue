@@ -21,17 +21,6 @@ import featuredObject from '../mixins/featuredObject.js'
 
 export default {
     name:'PageSection',
-    data: function() {
-        return {
-            tileDef: {
-                1:{
-                    
-                }
-            }
-
-        }
-
-    },
     components: {
         BasePageSection
     },
@@ -92,7 +81,7 @@ export default {
                     return {
                         artTitle: art.title,
                         artText: art.authorName,
-                        artType: art.type,
+                        artType: "kahani",
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;

@@ -30,11 +30,12 @@
                 </div>
             </div>
         </div>
-        <page-section-with-tile1
+        <page-section-with-tile
         section-header="SpotLight"
         :with-section-end="true"
-        :art-list="poemArray"
         :num-rows="2"
+        :tile-type="1"
+        from-location="/api/featured/kavita"
         />
         <base-pink-ribbon>
             Some stuff here
