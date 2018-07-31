@@ -1,0 +1,148 @@
+/***** CSS global website colors *****/
+:root {
+    --pink: #ff5c5c;
+    --grey: #515052;
+    --golden: #eee8e5;
+    --lightgrey: #f0f0f0;
+    --midgrey: #d9d9d9;
+    --footer-black: #3e3d3f;
+}
+
+/***** CSS global website colors *****/
+
+/* ---Start Footer CSS --- */
+#footer a {
+    text-decoration: none;
+    color: var(--footer-black);
+    font-weight: 600;
+}
+/* ---End Footer CSS --- */
+
+/* --- Start reusable elements ---*/
+
+h3 {
+    font-family: "Arya", sans-serif;
+    text-align: center;
+}
+
+.fa-circle {
+    vertical-align: middle;
+    font-size: 8px;
+    margin-top: 10px;
+}
+
+.header3 {
+    font-family: "Arya", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sub-heading {
+    font-size: 20px;
+}
+
+.sub-heading2 {
+    line-height: 1;
+    font-size: 22px;
+    color: #666;
+}
+
+
+/**Footer**/
+.page-end {
+    height: 10px;
+    border-bottom: 1.5px solid var(--footer-black);
+    border-top: 1.5px solid var(--footer-black);
+}
+/**Footer**/
+
+img.icon {
+    border-radius: 50%;
+    max-height: 120px;
+}
+
+.genre-tile {
+    margin: 2px;
+    background-color: var(--golden);
+}
+
+.light {
+    background-color: var(--golden);
+}
+
+.dark {
+    background-color: var(--midgrey);
+}
+
+
+/* --- End reusable elements ---*/
+
+/* ---Start Specific Objects - possibly id'ed things-- */
+
+/* --- End Specific Objects --- */
+
+/* ---Start reusable primitives ---*/
+.space-right-sm {
+    margin-right: 5px;
+}
+
+.space-left-sm {
+    margin-left: 5px;
+}
+
+.space-top-lg {
+    margin-top: 15px;
+}
+
+.space-top-sm {
+    margin-top: 5px;
+}
+
+.space-bottom-md {
+    margin-bottom: 10px;
+}
+
+.color-pink {
+    color: var(--pink);
+}
+
+.color-red {
+    color: red;
+}
+
+.color-change-hover:hover {
+    color: #434f75;
+    cursor: pointer;
+}
+
+.no-padding-margin {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.no-border {
+    border: 0px;
+}
+
+.center-it {
+    text-align: center;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.bold {
+    font-weight: bold
+}
+/* ---End reusable primitives ---*/

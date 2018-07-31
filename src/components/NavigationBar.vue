@@ -1,0 +1,94 @@
+<template>
+    <span>
+        <div id="header" class="container d-none d-md-block">
+            <h3>
+                <i class="fas fa-circle space-bottom-md color-pink"></i>
+                <a href="/">अभिव्यक्त</a>
+            </h3>
+        </div>
+        <div class="wide-nav sticky-top">
+            <div class="container ">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand d-block d-md-none" href="/">
+                        <i class="fas fa-circle space-bottom-md color-pink"></i>अभिव्यक्त
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse  justify-content-center " id="navbarToggler">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kavita">कविता</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/kahani">कहानी</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dictionary">शब्दकोश</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/muhavare">मुहावरे</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dohe">दोहे</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </span>
+</template>
+
+<script>
+export default {
+    name: "navbar"
+}
+</script>
+
+<style scoped>
+/* ---Start Nav bar related Css ---*/
+.navbar-brand {
+    font-family: "Arya", sans-serif;
+    font-size: 32px;
+}
+
+#header {
+    padding-top: 1rem;
+}
+
+#header a {
+    color: rgb(0, 0, 0, 0.9);
+    text-decoration: none;
+    font-size: 34px;
+}
+
+.wide-nav {
+    border-bottom: 1.5px solid var(--golden);
+    border-top: 1.5px solid var(--golden);
+    background-color: #fff;
+}
+
+.navbar {
+    padding: 2px;
+}
+
+.navbar-nav > li {
+    padding: 0rem 1.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 24px;
+    padding: 0rem;
+    color: rgb(0, 0, 0);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--grey);
+    text-decoration: underline;
+    text-decoration-color: var(--pink);
+}
+
+/* ---End Nav bar related Css ---*/
+</style>
