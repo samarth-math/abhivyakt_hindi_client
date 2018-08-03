@@ -35,7 +35,8 @@
         :with-section-end="true"
         :num-rows="2"
         :tile-type="1"
-        from-location="/api/featured/kavita"
+        :row-size="3"
+        from-location="/api/spotlight"
         />
         <base-pink-ribbon>
             Some stuff here
@@ -59,13 +60,11 @@
 </template>
 
 <script>
-import PageSectionWithTile1 from "./PageSectionWithTile1"
 import PageSectionWithTile from "./PageSectionWithTile"
 import BaseImageWithText from "./BaseImageWithText"
 import BasePinkRibbon from "./BasePinkRibbon"
 export default {
     components: {
-        PageSectionWithTile1,
         PageSectionWithTile,
         BaseImageWithText,
         BasePinkRibbon

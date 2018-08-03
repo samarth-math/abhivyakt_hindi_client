@@ -81,7 +81,7 @@ export default {
                     return {
                         artTitle: art.title,
                         artText: art.authorName,
-                        artType: "kahani",
+                        artType: art.type,
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;
