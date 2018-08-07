@@ -23,10 +23,6 @@ export default {
         withSectionEnd: {
             type: Boolean,
             default: false
-        },
-        withPageEnd: {
-            type: Boolean, 
-            default: false
         }
     }
 }
@@ -38,15 +34,15 @@ export default {
 }
 
 .section-heading {
-    border-bottom: 1.5px solid var(--golden);
-    border-top: 1.5px solid var(--golden);
+    border-bottom: 1.75px solid var(--golden);
+    border-top: 1.75px solid var(--golden);
     margin: 1rem 0rem;
     padding: 2px 0px;
     text-align: center;
 }
 
 .section-single-line-heading {
-    border-bottom: 1.5px solid var(--golden);
+    border-bottom: 1.75px solid var(--golden);
     text-align: center;
     margin: 1rem 0rem;
     padding: 2px 0px;
@@ -56,8 +52,8 @@ export default {
 .section-end {
     margin-top: 10px;
     height: 10px;
-    border-bottom: 1.5px solid var(--golden);
-    border-top: 1.5px solid var(--golden);
+    border-bottom: 1.75px solid var(--golden);
+    border-top: 1.75px solid var(--golden);
     margin-bottom: 10px;
 }
 

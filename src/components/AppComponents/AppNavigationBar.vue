@@ -3,15 +3,15 @@
         <div id="header" class="container d-none d-md-block">
             <h3>
                 <i class="fas fa-circle space-bottom-md color-pink"></i>
-                <a href="/">अभिव्यक्त</a>
+                <router-link to="/">अभिव्यक्त</router-link>
             </h3>
         </div>
         <div class="wide-nav sticky-top">
             <div class="container ">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand d-block d-md-none" href="/">
+                    <router-link class="navbar-brand d-block d-md-none" to="/">
                         <i class="fas fa-circle space-bottom-md color-pink"></i>अभिव्यक्त
-                    </a>
+                    </router-link>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -19,10 +19,13 @@
                     <div class="collapse navbar-collapse  justify-content-center " id="navbarToggler">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="/kavita">कविता</a>
+                                <router-link class="nav-link" to="/kavita">कविता</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/kahani">कहानी</a>
+                                <router-link class="nav-link" to="/kahani">कहानी</router-link>
+                            </li>
+                            <li class="nav-item">
+                                <router-link class="nav-link" to="/rachanakar">रचनाकार</router-link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/dictionary">शब्दकोश</a>

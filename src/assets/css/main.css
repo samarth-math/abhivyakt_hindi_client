@@ -11,11 +11,7 @@
 /***** CSS global website colors *****/
 
 /* ---Start Footer CSS --- */
-#footer a {
-    text-decoration: none;
-    color: var(--footer-black);
-    font-weight: 600;
-}
+
 /* ---End Footer CSS --- */
 
 /* --- Start reusable elements ---*/
@@ -45,20 +41,6 @@ h3 {
     line-height: 1;
     font-size: 22px;
     color: #666;
-}
-
-
-/**Footer**/
-.page-end {
-    height: 10px;
-    border-bottom: 1.5px solid var(--footer-black);
-    border-top: 1.5px solid var(--footer-black);
-}
-/**Footer**/
-
-img.icon {
-    border-radius: 50%;
-    max-height: 120px;
 }
 
 .genre-tile {

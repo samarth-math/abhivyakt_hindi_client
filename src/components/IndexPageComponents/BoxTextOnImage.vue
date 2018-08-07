@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: "BaseImageWithText",
+    name: "BoxTextOnImage",
     props: {
         imgSrc: {
             type: String,
@@ -41,7 +41,7 @@ export default {
     },
     computed: {
         imgLoc: function(){
-            return require("../assets/imgs/"+this.imgSrc)
+            return require("../../assets/imgs/"+this.imgSrc)
         }
     }
 }

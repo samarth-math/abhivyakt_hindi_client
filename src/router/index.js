@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import IndexPage from '@/components/IndexPage'
+import AbhivyaktHomePage from '@/components/IndexPageComponents/AbhivyaktHomePage'
+import KavitaHomePage from '@/components/KavitaComponents/KavitaHomePage'
+import RachanakarHomePage from '@/components/RachanakarComponents/RachanakarHomePage'
 
 Vue.use(Router)
 
@@ -14,8 +16,18 @@ export default new Router({
     },
     {
         path: '/',
-        name: 'IndexPage',
-        component: IndexPage
+        name: 'AbhivyaktHomePage',
+        component: AbhivyaktHomePage
+    },
+    {
+        path: '/kavita',
+        name: 'KavitaHomePage',
+        component: KavitaHomePage
+    },
+    {
+        path: '/rachanakar',
+        name: 'RachanakarHomePage',
+        component: RachanakarHomePage
     }
   ]
 })

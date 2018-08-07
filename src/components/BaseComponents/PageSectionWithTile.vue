@@ -10,14 +10,14 @@
                 :is="tileComponent"
                 v-bind="tileProperties(art, tileIndex)"/>
             </div>
-            <div class="row justify-content-center">more poems here
+            <div class="row justify-content-center"><slot></slot>
             </div>
     </base-page-section>
 </template>
 
 <script>
 import BasePageSection from './BasePageSection'
-import featuredObject from '../mixins/featuredObject.js'
+import featuredObject from '../../mixins/featuredObject.js'
 
 export default {
     name:'PageSection',
@@ -66,7 +66,6 @@ export default {
     },
     created() {
         this.fetchContent(this.fromLocation)
-        console.log(this.loadedContent.length)
     },
     methods: {
         isNotLastRow: function(value) {
