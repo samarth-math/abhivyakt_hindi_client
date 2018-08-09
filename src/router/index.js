@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import AbhivyaktHomePage from '@/components/IndexPageComponents/AbhivyaktHomePage'
 import KavitaHomePage from '@/components/KavitaComponents/KavitaHomePage'
+import KahaniHomePage from '@/components/KahaniComponents/KahaniHomePage'
 import RachanakarHomePage from '@/components/RachanakarComponents/RachanakarHomePage'
 
 Vue.use(Router)
@@ -23,6 +24,11 @@ export default new Router({
         path: '/kavita',
         name: 'KavitaHomePage',
         component: KavitaHomePage
+    },
+    {
+        path: '/kahani',
+        name: 'KahaniHomePage',
+        component: KahaniHomePage
     },
     {
         path: '/rachanakar',
