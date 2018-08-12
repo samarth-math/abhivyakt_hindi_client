@@ -49,6 +49,11 @@ export default {
                 return [1,2].indexOf(value) !== -1
             }
         },
+        overriddenArtTypeValue: {
+            //This field is only valid for Tile 1
+            type:String,
+            default: "default",
+        },
         fromLocation: {
             type: String
         }
@@ -74,13 +79,20 @@ export default {
         isLastTile: function(value) {
             return value==this.sizeOfRow-1
         },
+        $_pageSection_artTypeCalculation: function(art){// convention for naming private funcs
+            if (this.overriddenArtTypeValue!="default" && this.tileType==1){
+                return this.overriddenArtTypeValue
+            }
+            return art.type
+        },
         tileProperties: function(art, tileIndex) {
             switch(this.tileType) {
                 case 1:
+                    var artType = this.$_pageSection_artTypeCalculation(art)
                     return {
                         artTitle: art.title,
                         artText: art.authorName,
-                        artType: art.type,
+                        artType: artType,
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;
