@@ -1,6 +1,7 @@
 /***** CSS global website colors *****/
 :root {
     --pink: #ff5c5c;
+    --lightpink: #ffb6b6;
     --grey: #515052;
     --golden: #eee8e5;
     --lightgrey: #f0f0f0;
@@ -15,6 +16,10 @@
 /* ---End Footer CSS --- */
 
 /* --- Start reusable elements ---*/
+
+.hidden{
+    visibility: hidden;
+}
 
 h3 {
     font-family: "Arya", sans-serif;
