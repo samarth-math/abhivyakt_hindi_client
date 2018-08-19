@@ -16,7 +16,8 @@
         link-text="Explore his works" />
 
         <base-page-section sectionHeader="BROWSE BY NAME">
-        <lettered-data-table/>
+        <lettered-paginated-table
+        from-location="/api/featured"/>
         </base-page-section>
 
     </div>
@@ -27,7 +28,7 @@ import PageSectionWithTile from "../BaseComponents/PageSectionWithTile"
 import HomePageHeader from "../BaseComponents/HomePageHeader"
 import BasePageSection from "../BaseComponents/BasePageSection"
 import BoxImageWithText from "./BoxImageWithText"
-import LetteredDataTable from "./LetteredDataTable"
+import LetteredPaginatedTable from "../BaseComponents/LetteredPaginatedTable"
 import apiObject from "../../mixins/apiObject.js"
 
 export default {
@@ -37,7 +38,7 @@ export default {
         PageSectionWithTile,
         BoxImageWithText,
         BasePageSection,
-        LetteredDataTable,
+        LetteredPaginatedTable,
     }
 };
 </script>
