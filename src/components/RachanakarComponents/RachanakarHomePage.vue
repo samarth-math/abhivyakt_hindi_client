@@ -15,10 +15,18 @@
         img-src="RamdhariDinkar.png"
         link-text="Explore his works" />
 
-        <base-page-section sectionHeader="BROWSE BY NAME">
+        <base-page-section section-header="BROWSE BY NAME">
         <lettered-paginated-table
         from-location="/api/featured"/>
         </base-page-section>
+
+        <page-section-with-tile
+        section-header="FEATURED POETS"
+        :row-size=5
+        :num-rows=1
+        :tile-type=3
+        from-location="/api/featured/rachnakar">
+        </page-section-with-tile>
 
     </div>
 </template>

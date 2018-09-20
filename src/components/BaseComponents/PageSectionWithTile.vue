@@ -46,7 +46,7 @@ export default {
             type:Number,
             default: 2,
             validator: function(value) {
-                return [1,2].indexOf(value) !== -1
+                return [1,2,3].indexOf(value) !== -1
             }
         },
         overriddenArtTypeValue: {
@@ -85,7 +85,7 @@ export default {
             }
             return art.type
         },
-        tileProperties: function(art, tileIndex) {
+        tileProperties: function(art, tileIndex) {// mapping of request object to tile properties
             switch(this.tileType) {
                 case 1:
                     var artType = this.$_pageSection_artTypeCalculation(art)
@@ -101,6 +101,12 @@ export default {
                         artTitle: art.title,
                         artText: art.authorName,
                         isLastTile: this.isLastTile(tileIndex)
+                    }
+                    break;
+                case 3:
+                    return {
+                        imgName: art.name,
+                        imgSrc: art.imgSrc
                     }
             }
             

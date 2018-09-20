@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col">
             Search by : <span
-            v-for="(data, letter) in albhabets"
+            v-for="(data, letter) in alphabets"
             class="alphabets"
             :class="{'active': isActive(letter)}"
             :key="letter + 'a'"
             @click="changeTable(letter)">{{letter}}</span>
 
             <paginated-table
-            v-for="(data, letter) in albhabets"
+            v-for="(data, letter) in alphabets"
             :key="letter"
             :class="{'hide' : letter!=currentLetter }"
             :columns="['type', 'title']"
@@ -30,29 +30,34 @@ export default {
     mixins: [featuredObject],
     data() {
         return {
-            currentLetter : "kavita",
-            albhabets: {"kavita":[], "kahani":[], "dohe":[]},
+            currentLetter:""
         }
     },
     props: {
         fromLocation: {
             type: String,
             required: true
+        },
+        alphabets: {
+            type: Object,
+            default: function() {// the format of the return object is required
+                return { kavita: [], kahani: [], dohe: [] }
+            }
         }
     },
     created() {
-        this.changeTable("kavita")
+        this.changeTable(Object.keys(this.alphabets)[0])//First key in alphabets
     },
     methods: {
         changeTable(letter) {
-            var prom = this.fetchContent(this.fromLocation+'/'+letter)
+            var prom = this.fetchContent(this.fromLocation + "/" + letter)
             this.currentLetter = letter
             prom.then(response => {
-                this.albhabets[letter] = response.data.content;
-            });
+                this.alphabets[letter] = response.data.content
+            })
         },
         isActive(letter) {
-            return this.currentLetter==letter
+            return this.currentLetter == letter
         }
     }
 }
@@ -60,11 +65,11 @@ export default {
 
 <style scoped>
 .hide {
-    display:none;
+    display: none;
 }
 
-.alphabets{
-    padding:5px;
+.alphabets {
+    padding: 5px;
     font-weight: bold;
 }
 
@@ -75,8 +80,7 @@ export default {
 }
 
 .alphabets.active {
-    color:#ffffff;
+    color: #ffffff;
     background-color: var(--pink);
 }
-
 </style>
