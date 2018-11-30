@@ -106,7 +106,7 @@ export default {
                 case 3:
                     return {
                         imgName: art.name,
-                        imgSrc: art.imgSrc
+                        imageObject: art.image
                     }
             }
             
