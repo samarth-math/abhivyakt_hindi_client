@@ -7,7 +7,7 @@
             <span class="header">{{title}}</span>
             <hr/> {{text}}<br/><br/>
             <div class="link">
-                <a :href="linkDestination">{{linkText}}</a>
+                <a :to="linkDestination">{{linkText}}</a>
             </div>
         </div>
     </div>

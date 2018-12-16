@@ -12,8 +12,8 @@
             v-for="(data, letter) in alphabets"
             :key="letter"
             :class="{'hide' : letter!=currentLetter }"
-            :columns="['type', 'title']"
-            :objectFields="['type', 'title']"
+            :columns="['name', 'birth', 'death', 'gender']"
+            :objectFields="['name', 'birth', 'death', 'gender']"
             :data-array="data"/>
         </div>
     </div>
@@ -41,7 +41,7 @@ export default {
         alphabets: {
             type: Object,
             default: function() {// the format of the return object is required
-                return { kavita: [], kahani: [], dohe: [] }
+                return { छ: [], ग: [] }
             }
         }
     },

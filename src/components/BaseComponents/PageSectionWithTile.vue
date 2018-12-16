@@ -30,7 +30,7 @@ export default {
             type: String,
             required:true
         },
-        withSectionEnd: {
+        withSectionEnd: {// double hr at the bottom
             type: Boolean,
             default: false
         },

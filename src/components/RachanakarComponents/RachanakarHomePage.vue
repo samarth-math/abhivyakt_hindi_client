@@ -13,11 +13,12 @@
             independence"
         title="Ramdhari Singh Dinkar"
         img-src="RamdhariDinkar.png"
-        link-text="Explore his works" />
+        link-text="Explore his works"
+        link-destination="/kahani" />
 
         <base-page-section section-header="BROWSE BY NAME">
         <lettered-paginated-table
-        from-location="/api/featured"/>
+        from-location="/api/rachnakar/startCharacter"/>
         </base-page-section>
 
         <page-section-with-tile
