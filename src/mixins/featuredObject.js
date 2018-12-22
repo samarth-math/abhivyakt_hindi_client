@@ -10,11 +10,15 @@ var featuredObject = {
             axios
                 .get(apiEndpoint)
                 .then(response => {
-                    this.loadedContent = response.data.content
+                    this.handleFetchedContent(response.data)
                 })
                 .catch(e => {
                     this.errors.push(e)
                 });
+        },
+        handleFetchedContent: function(responseData) {
+            console.log("calling featured object handleFetchedContent")
+            this.loadedContent = responseData.content
         }
     }
 }

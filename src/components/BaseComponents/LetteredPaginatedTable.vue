@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import featuredObject from "../../mixins/featuredObjectWithPromise.js"
+import featuredObject from "../../mixins/featuredObject.js"
 import PaginatedTable from "./PaginatedTable"
 export default {
     name: "LetteredPaginatedTable",
@@ -50,11 +50,12 @@ export default {
     },
     methods: {
         changeTable(letter) {
-            var prom = this.fetchContent(this.fromLocation + "/" + letter)
+            this.fetchContent(this.fromLocation + "/" + letter)
             this.currentLetter = letter
-            prom.then(response => {
-                this.alphabets[letter] = response.data.content
-            })
+        },
+        handleFetchedContent: function(responseData) {//Overriding original function
+            console.log("calling lettered paginated table handleFetchedContent")
+            this.alphabets[this.currentLetter] = responseData.content
         },
         isActive(letter) {
             return this.currentLetter == letter
