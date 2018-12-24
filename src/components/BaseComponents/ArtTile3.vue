@@ -1,6 +1,6 @@
 <template>
     <div class="col center-it">
-        <img v-if="image" class="icon img-fluid" v-bind:src="'data:image/jpeg;base64,' + image"/>
+        <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
         <br/>{{imgName}}
     </div>
 </template>

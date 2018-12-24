@@ -5,35 +5,42 @@ import AbhivyaktHomePage from '@/components/IndexPageComponents/AbhivyaktHomePag
 import KavitaHomePage from '@/components/KavitaComponents/KavitaHomePage'
 import KahaniHomePage from '@/components/KahaniComponents/KahaniHomePage'
 import RachanakarHomePage from '@/components/RachanakarComponents/RachanakarHomePage'
+import RachnakarPage from '@/components/RachanakarComponents/RachnakarPage'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/hello',
-      name: 'HelloWorld',
+      path: "/hello",
+      name: "HelloWorld",
       component: HelloWorld
     },
     {
-        path: '/',
-        name: 'AbhivyaktHomePage',
-        component: AbhivyaktHomePage
+      path: "/",
+      name: "AbhivyaktHomePage",
+      component: AbhivyaktHomePage
     },
     {
-        path: '/kavita',
-        name: 'KavitaHomePage',
-        component: KavitaHomePage
+      path: "/kavita",
+      name: "KavitaHomePage",
+      component: KavitaHomePage
     },
     {
-        path: '/kahani',
-        name: 'KahaniHomePage',
-        component: KahaniHomePage
+      path: "/kahani",
+      name: "KahaniHomePage",
+      component: KahaniHomePage
     },
     {
         path: '/rachanakar',
         name: 'RachanakarHomePage',
         component: RachanakarHomePage
+    },
+    {
+      path: "/rachnakar/:id",
+      name: "RachnakarPage",
+      component: RachnakarPage,
+      props: true
     }
   ]
 })

@@ -14,7 +14,8 @@
             :class="{'hide' : letter!=currentLetter }"
             :columns="['name', 'birth', 'death', 'gender']"
             :objectFields="['name', 'birth', 'death', 'gender']"
-            :data-array="data"/>
+            :data-array="data"
+            pointRecordToPath="rachnakar"/>
         </div>
     </div>
 </template>
@@ -41,7 +42,7 @@ export default {
         alphabets: {
             type: Object,
             default: function() {// the format of the return object is required
-                return { छ: [], ग: [] }
+                return {अ:[], छ: [], ग: [] }
             }
         }
     },

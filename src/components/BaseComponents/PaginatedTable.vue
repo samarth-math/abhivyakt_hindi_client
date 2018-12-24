@@ -13,7 +13,7 @@
             :key="rowIndex"
             :class="{'bottom-border': isNotLastRow(rowIndex)}">
                 <td>{{rowIndex+1}}</td>
-                <td v-for="field in objectFields" :key="field">{{$_DataTable_generateObjectFields(art, field)}}</td>
+                <td v-for="field in objectFields" :key="field"><router-link :to="pointRecordToPath + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link></td>
             </tr>
             <tr v-for="i in this.currentPageRemainingEmptyRows" 
             :key="i + 'empty'">
@@ -21,7 +21,7 @@
                 <td v-for="field in objectFields" :key="field">-</td>
             </tr>
         </tbody>
-    </table>
+    </table> 
   <ul class="pagination justify-content-center pagination-sm">
     <li class="page-item page-link"
     :class="{'hidden': this.currentPage==1}" 
@@ -72,6 +72,9 @@ export default {
         dataArray: {
             type: Array,
             required: false
+        },
+        pointRecordToPath: {
+            type: String
         }
     },
     computed: {

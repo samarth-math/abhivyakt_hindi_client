@@ -2,6 +2,7 @@ var featuredImage = {
     data: function () {
         return {
             image: null,
+            errors: []
         }
     },
     methods: {
