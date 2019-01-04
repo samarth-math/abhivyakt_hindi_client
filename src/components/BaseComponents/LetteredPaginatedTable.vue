@@ -42,11 +42,7 @@ export default {
         alphabets: {
             type: Object,
             default: function() {// the format of the return object is required
-<<<<<<< HEAD
                 return {अ:[], छ: [], ग: [], द :[] }
-=======
-                return {अ:[], छ: [], ग: [] }
->>>>>>> master
             }
         }
     },

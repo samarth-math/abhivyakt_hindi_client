@@ -37,7 +37,7 @@
         :num-rows="2"
         :tile-type="1"
         :row-size="3"
-        from-location="/api/spotlight"
+        from-location="spotlight"
         />
         <pink-ribbon>
             Some stuff here
@@ -48,14 +48,14 @@
         :num-rows="1"
         :row-size="5"
         :tile-type="2"
-        from-location="/api/featured/kavita"/>
+        from-location="featured/kavita"/>
         
         <page-section-with-tile
         section-header="Featured Kahaniyaan"
         :num-rows="1"
         :row-size="5"
         :tile-type="2"
-        from-location="/api/featured/kahani"/>
+        from-location="featured/kahani"/>
         
     </div>
 </template>

@@ -10,12 +10,12 @@
         :row-size="3"
         :tile-type="1"
         :with-section-end="true"
-        from-location="/api/featured/kavita" />
+        from-location="featured/kavita" />
 
         <base-page-section
         section-header="Browse Poems">
         <lettered-paginated-table
-        from-location="/api/featured" />
+        from-location="featured" />
         </base-page-section>
 
     </div>

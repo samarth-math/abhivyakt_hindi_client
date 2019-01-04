@@ -34,8 +34,6 @@ export default {
         },
         'imageHex' : function() {
             if(this.loadedContent.image){
-                console.log(this.loadedContent.image)
-                console.log(this.loadedContent.image.thumbnail)
                 this.fetchImage(this.loadedContent.image.thumbnail)
             }
             return this.image
@@ -46,7 +44,7 @@ export default {
         HomePageHeader
     },
     created() {
-        this.fetchContent("/api/rachnakar/" + this.id)
+        this.fetchContent("rachnakar/" + this.id)
     }
 }
 </script>

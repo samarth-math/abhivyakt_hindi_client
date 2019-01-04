@@ -18,7 +18,7 @@
 
         <base-page-section section-header="BROWSE BY NAME">
         <lettered-paginated-table
-        from-location="/api/rachnakar/startCharacter"/>
+        from-location="rachnakar/startCharacter"/>
         </base-page-section>
 
         <page-section-with-tile
@@ -26,7 +26,7 @@
         :row-size=5
         :num-rows=1
         :tile-type=3
-        from-location="/api/featured/rachnakar">
+        from-location="featured/rachnakar">
         </page-section-with-tile>
 
     </div>

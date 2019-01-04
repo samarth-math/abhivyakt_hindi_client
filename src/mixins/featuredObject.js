@@ -8,7 +8,7 @@ var featuredObject = {
     methods: {
         fetchContent: function(apiEndpoint) {
             axios
-                .get(apiEndpoint)
+                .get("/api/" + apiEndpoint)
                 .then(response => {
                     this.handleFetchedContent(response.data)
                 })
