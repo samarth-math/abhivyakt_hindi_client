@@ -6,7 +6,7 @@
         v-if="loadedContent.image"
         :src="'data:image/jpeg;base64,' + imageHex"/>
         <br/>
-        {{loadedContent.biography}}
+        {{loadedContent.content}}
 
 
     </div>
@@ -21,7 +21,7 @@ import featuredObject from '../../mixins/featuredObject.js'
 import featuredImage from '../../mixins/featuredImage.js'
 
 export default {
-    name: "RachnakarPage",
+    name: "KavitaPage",
     props: { 
         'id': { // Getting this from the route, not defined manually
             type: String,
@@ -30,7 +30,7 @@ export default {
     },
     computed: {
         'authorName' : function() {
-            return this.loadedContent.name
+            return this.loadedContent.authorName
         },
         'imageHex' : function() {
             if(this.loadedContent.image){
@@ -44,7 +44,7 @@ export default {
         HomePageHeader
     },
     created() {
-        this.fetchContent("rachnakar/" + this.id)
+        this.fetchContent("kavita/" + this.id)
     }
 }
 </script>
