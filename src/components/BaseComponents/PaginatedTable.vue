@@ -13,7 +13,10 @@
             :key="rowIndex"
             :class="{'bottom-border': isNotLastRow(rowIndex)}">
                 <td>{{rowIndex+1}}</td>
-                <td v-for="field in objectFields" :key="field"><router-link :to="linkTo + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link></td>
+                <td v-for="field in objectFields" :key="field">
+                    <router-link v-if="field==='name'" :to="linkTo + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link>
+                    <span v-else>{{$_DataTable_generateObjectFields(art, field)}}</span>
+                    </td>
             </tr>
             <tr v-for="i in this.currentPageRemainingEmptyRows" 
             :key="i + 'empty'">
