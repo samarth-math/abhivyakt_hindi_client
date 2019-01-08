@@ -2,6 +2,7 @@ var featuredImage = {
     data: function () {
         return {
             image: null,
+            isImageLoaded: false,
             errors: []
         }
     },
@@ -11,6 +12,7 @@ var featuredImage = {
               .get("/api/img/" + imageId)
               .then(response => {
                 this.image = response.data
+                this.isImageLoaded = true
               })
               .catch(e => {
                 this.errors.push(e)
