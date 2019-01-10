@@ -1,14 +1,13 @@
 <template>
     <div v-if="isContentLoaded">
         <home-page-header
-         :headerText="authorName" />
+         :headerText="title"
+         :description="author" />
         <img 
         v-if="loadedContent.image"
         :src="'data:image/jpeg;base64,' + imageHex"/>
         <br/>
-        {{loadedContent.content}}
-
-
+        {{content}}
     </div>
 </template>
 
@@ -29,8 +28,14 @@ export default {
         },
     },
     computed: {
-        'authorName' : function() {
+        'author' : function() {
             return this.loadedContent.authorName
+        },
+        'title' : function() {
+            return this.loadedContent.title
+        },
+        'content': function() {
+            return this.loadedContent.content
         },
         'imageHex' : function() {
             if(this.loadedContent.image){
