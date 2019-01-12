@@ -1,8 +1,16 @@
 <template>
     <div class="tile col-sm" :class="{'no-border':isLastTile}">
-        <div class="col-sm title align-self-start">{{artTitle}}</div>
+        <div class="col-sm title align-self-start">
+            <router-link v-if="artTitleLink" :to=artTitleLink>
+                {{artTitle}}
+            </router-link>
+        </div>
         <br/>
-        <div class="col-sm text align-self-end">{{artText}}</div>
+        <div class="col-sm text align-self-end">
+            <router-link v-if="artTextLink" :to=artTextLink>
+                {{artText}}
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -14,8 +22,14 @@ export default {
             type: String,
             required: true
         },
+        artTitleLink: {
+            type: String
+        },
         artText: {
             type: String,
+        },
+        artTextLink: {
+            type: String
         },
         isLastTile: {
             type: Boolean,

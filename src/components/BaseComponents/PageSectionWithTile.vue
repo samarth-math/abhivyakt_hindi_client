@@ -24,6 +24,15 @@ export default {
     components: {
         BasePageSection
     },
+    data() {
+        return {
+        artTypeToEnglish : {
+                "रचनाकार" : "rachnakar",
+                "कविता" : "kavita",
+                "कहानी" : "kahani",
+            }
+        }
+    },
     mixins:[featuredObject],
     props: {
         sectionHeader: {
@@ -79,11 +88,18 @@ export default {
         isLastTile: function(value) {
             return value==this.sizeOfRow-1
         },
-        $_pageSection_artTypeCalculation: function(art){// convention for naming private funcs
-            if (this.overriddenArtTypeValue!="default" && this.tileType==1){
+        $_pageSection_artTypeCalculation: function(art, inHindi= true){// convention for naming private funcs
+        // This function returns either an overriden art type value, or simply the default art type for the object
+        // It can also convert the value to english, which is useful for figuring out paths based on the art type
+        // which is used for linking the tiles to pages
+            if (this.overriddenArtTypeValue!="default" && this.tileType==1){ // if overridden, just return that
                 return this.overriddenArtTypeValue
             }
-            return art.type
+            if (inHindi) {
+                return art.type
+            } else {
+                return this.artTypeToEnglish[art.type]
+            }
         },
         tileProperties: function(art, tileIndex) {// mapping of request object to tile properties
             switch(this.tileType) {
@@ -93,6 +109,8 @@ export default {
                         artTitle: art.title,
                         artText: art.authorName,
                         artType: artType,
+                        artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
+                        artTextLink: 'rachnakar' + '/' + art.authorId.$oid,
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;
@@ -100,13 +118,16 @@ export default {
                     return {
                         artTitle: art.title,
                         artText: art.authorName,
+                        artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
+                        artTextLink: 'rachnakar' + '/' + art.authorId.$oid,
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;
                 case 3:
                     return {
                         imgName: art.name,
-                        imageObject: art.image
+                        imageObject: art.image,
+                        imageLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid
                     }
             }
             

@@ -2,9 +2,17 @@
     <div class="tile col-sm" :class="{'no-border':isLastTile}">
         <span class="type">{{artType}}</span>
         <br>
-        <span class="title">{{artTitle}}</span>
+        <span class="title">
+            <router-link v-if="artTitleLink" :to=artTitleLink>
+                {{artTitle}}
+            </router-link>
+        </span>
         <br>
-        <span class="text">{{artText}}</span>
+        <span class="text">
+            <router-link v-if="artTextLink" :to=artTextLink>
+                {{artText}}
+            </router-link>
+        </span>
     </div>
 </template>
 
@@ -19,8 +27,14 @@ export default {
             type: String,
             required: true
         },
+        artTitleLink: {
+            type: String
+        },
         artText: {
             type: String,
+        },
+        artTextLink: {
+            type: String
         },
         isLastTile: {
             type: Boolean,

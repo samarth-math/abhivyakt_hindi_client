@@ -1,7 +1,13 @@
 <template>
     <div class="col center-it">
+        <router-link v-if="imageLink" :to=imageLink>
         <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
         <br/>{{imgName}}
+        </router-link>
+        <span v-else>
+        <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
+        <br/>{{imgName}}
+        </span>
     </div>
 </template>
 
@@ -17,6 +23,9 @@ export default {
         },
         imageObject: {
             type: Object
+        },
+        imageLink: {
+            type: String
         }
     },
     created() {
