@@ -5,6 +5,7 @@ import AbhivyaktHomePage from "@/components/IndexPageComponents/AbhivyaktHomePag
 import KavitaHomePage from "@/components/KavitaComponents/KavitaHomePage"
 import KavitaPage from "@/components/KavitaComponents/KavitaPage"
 import KahaniHomePage from "@/components/KahaniComponents/KahaniHomePage"
+import KahaniPage from "@/components/KahaniComponents/KahaniPage"
 import RachanakarHomePage from "@/components/RachanakarComponents/RachanakarHomePage"
 import RachnakarPage from "@/components/RachanakarComponents/RachnakarPage"
 
@@ -28,15 +29,21 @@ export default new Router({
       component: KavitaHomePage
     },
     {
+      path: "/kavita/:id",
+      name: "KavitaPage",
+      component: KavitaPage,
+      props: true
+    },
+    {
       path: "/kahani",
       name: "KahaniHomePage",
       component: KahaniHomePage
     },
     {
-        path: "/kavita/:id",
-        name: "KavitaPage",
-        component: KavitaPage,
-        props: true
+      path: "/kahani/:id",
+      name: "KahaniPage",
+      component: KahaniPage,
+      props: true
     },
     {
       path: "/rachanakar",
