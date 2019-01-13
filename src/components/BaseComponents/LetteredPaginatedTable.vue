@@ -6,7 +6,7 @@
             class="alphabets"
             :class="{'active': isActive(letter)}"
             :key="letter + 'a'"
-            @click="changeTable(letter)">{{letter}}</span>
+            @click="changeTable(letter)"> {{letter}} </span>
 
             <paginated-table
             v-for="(data, letter) in alphabets"
@@ -42,7 +42,57 @@ export default {
         alphabets: {
             type: Object,
             default: function() {// the format of the return object is required
-                return {अ:[], छ: [], ग: [], द :[] }
+                return {
+                    अ: [],
+                    आ: [],
+                    इ: [],
+                    ई: [],
+                    उ: [],
+                    ऊ: [],
+                    ऋ: [],
+                    ऌ: [],
+                    ए: [],
+                    ऐ: [],
+                    ओ: [],
+                    औ: [],
+                    क: [],
+                    ख: [],
+                    ग: [],
+                    घ: [],
+                    ङ: [],
+                    च: [],
+                    छ: [],
+                    ज: [],
+                    झ: [],
+                    ञ: [],
+                    ट: [],
+                    ठ: [],
+                    ड: [],
+                    ढ: [],
+                    ण: [],
+                    त: [],
+                    थ: [],
+                    द: [],
+                    ध: [],
+                    न: [],
+                    ऩ: [],
+                    प: [],
+                    फ: [],
+                    ब: [],
+                    भ: [],
+                    म: [],
+                    य: [],
+                    र: [],
+                    ऱ: [],
+                    ल: [],
+                    ळ: [],
+                    ऴ: [],
+                    व: [],
+                    श: [],
+                    ष: [],
+                    स: [],
+                    ह: [],
+                }
             }
         }
     },
@@ -71,7 +121,7 @@ export default {
 }
 
 .alphabets {
-    padding: 5px;
+    padding: 3px;
     font-weight: bold;
 }
 

@@ -56,6 +56,14 @@
         :row-size="5"
         :tile-type="2"
         from-location="featured/kahani"/>
+
+        <page-section-with-tile
+        section-header="FEATURED Authors"
+        :row-size=5
+        :num-rows=1
+        :tile-type=3
+        from-location="featured/rachnakar">
+        </page-section-with-tile>
         
     </div>
 </template>

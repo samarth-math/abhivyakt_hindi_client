@@ -18,6 +18,14 @@
         from-location="featured" />
         </base-page-section>
 
+        <page-section-with-tile
+        section-header="FEATURED POETS"
+        :row-size=5
+        :num-rows=1
+        :tile-type=3
+        from-location="featured/rachnakar">
+        </page-section-with-tile>
+
     </div>
 </template>
 
