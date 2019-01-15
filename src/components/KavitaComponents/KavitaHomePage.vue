@@ -9,13 +9,13 @@
         :num-rows="2"
         :row-size="3"
         :tile-type="1"
-        :with-section-end="true"
         from-location="featured/kavita" />
 
         <base-page-section
         section-header="Browse Poems">
         <lettered-paginated-table
-        from-location="featured" />
+        from-location="kavita/startCharacter"
+        :columnObjectFieldMapping="{'kavita':'title'}"/>
         </base-page-section>
 
         <page-section-with-tile

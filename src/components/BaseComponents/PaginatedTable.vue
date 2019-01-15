@@ -5,15 +5,15 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th v-for="(column, index) in columns" :key="index">{{column}}</th>
+                <th v-for="(value, column, index) in columnObjectFieldMapping" :key="index">{{column}}</th>
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(art, rowIndex) in this.currentPageDataSlice" 
+            <tr v-for="(art, rowIndex) in this.currentPageDataSlice" column
             :key="rowIndex"
             :class="{'bottom-border': isNotLastRow(rowIndex)}">
                 <td>{{rowIndex+1}}</td>
-                <td v-for="field in objectFields" :key="field">
+                <td v-for="field in columnObjectFieldMapping" :key="field">
                     <router-link v-if="field==='name'" :to="linkTo + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link>
                     <span v-else>{{$_DataTable_generateObjectFields(art, field)}}</span>
                     </td>
@@ -21,7 +21,7 @@
             <tr v-for="i in this.currentPageRemainingEmptyRows" 
             :key="i + 'empty'">
                 <td>-</td>
-                <td v-for="field in objectFields" :key="field">-</td>
+                <td v-for="field in columnObjectFieldMapping" :key="field">-</td>
             </tr>
         </tbody>
     </table> 
@@ -60,13 +60,8 @@ export default {
     },
     mixins:[featuredObject],
     props:{
-        columns: {
-            type: Array,
-            required: true
-        },
-        objectFields: {
-            type: Array,
-            required: true
+        columnObjectFieldMapping: {
+            type: Object
         },
         pageSize: {
             type: Number,

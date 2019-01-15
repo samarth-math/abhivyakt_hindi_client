@@ -12,8 +12,7 @@
             v-for="(data, letter) in alphabets"
             :key="letter"
             :class="{'hide' : letter!=currentLetter }"
-            :columns="['name', 'birth', 'death', 'gender']"
-            :objectFields="['name', 'birth', 'death', 'gender']"
+            :columnObjectFieldMapping = columnObjectFieldMapping
             :data-array="data"
             linkTo="rachnakar"/>
         </div>
@@ -37,6 +36,10 @@ export default {
     props: {
         fromLocation: {
             type: String,
+            required: true
+        },
+        columnObjectFieldMapping: {
+            type: Object,
             required: true
         },
         alphabets: {

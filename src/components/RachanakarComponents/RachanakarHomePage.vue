@@ -18,7 +18,8 @@
 
         <base-page-section section-header="BROWSE BY NAME">
         <lettered-paginated-table
-        from-location="rachnakar/startCharacter"/>
+        from-location="rachnakar/startCharacter"
+        :columnObjectFieldMapping="{'name':'name', 'birth':'birth', 'death':'death', 'gender':'gender'}"/>
         </base-page-section>
 
         <page-section-with-tile

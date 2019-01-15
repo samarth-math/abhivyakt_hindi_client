@@ -9,13 +9,14 @@
         :num-rows="2"
         :row-size="3"
         :tile-type="1"
-        :with-section-end="true"
         from-location="featured/kahani" />
 
         <base-page-section
         section-header="Browse Poems">
+
         <lettered-paginated-table
-        from-location="featured" />
+        from-location="kahani/startCharacter"
+        :columnObjectFieldMapping="{'kahani':'title'}"/>
         </base-page-section>
     </div>
 </template>
