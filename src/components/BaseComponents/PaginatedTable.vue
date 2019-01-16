@@ -11,10 +11,11 @@
         <tbody>
             <tr v-for="(art, rowIndex) in currentPageDataSlice" column
             :key="rowIndex"
-            :class="{'bottom-border': isNotLastRow(rowIndex)}">
+            :class="{'bottom-border': isNotLastRow(rowIndex)}"
+            @click="rowClicked(art._id.$oid)">
                 <td>{{rowIndex+1}}</td>
                 <td v-for="field in columnObjectFieldMapping" :key="field">
-                    <router-link v-if="field==='name'" :to="linkTo + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link>
+                    <router-link v-if="linkTo" :to="linkTo + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link>
                     <span v-else>{{$_DataTable_generateObjectFields(art, field)}}</span>
                     </td>
             </tr>
@@ -118,6 +119,11 @@ export default {
         isActive(i) {
             return this.currentPage==i
         },
+        rowClicked: function(recordId) {
+            if (this.linkTo){
+                this.$router.push(this.linkTo + '/' + recordId)
+            }
+        },
         $_DataTable_generateObjectFields(art, field) {
             return art[field]
         }
@@ -160,6 +166,11 @@ export default {
 
 .bottom-border {
     border-bottom: 1.54px solid #a3a3a4;
+}
+
+.table tbody tr:hover {
+    cursor: pointer;
+    background-color: var(--lightgrey)
 }
 
 .table tbody {

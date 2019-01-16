@@ -21,22 +21,5 @@ export default {
 </script>
 
 <style>
-a {
-color: inherit;
-}
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-    color: var(--grey);
-    text-decoration: underline;
-    text-decoration-color: var(--pink);
-}
-a:active {
-    color: var(--grey);
-    text-decoration: underline;
-    text-decoration-color: var(--pink);}
+
 </style>

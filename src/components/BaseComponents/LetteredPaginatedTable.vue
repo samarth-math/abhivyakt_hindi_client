@@ -14,8 +14,8 @@
             :class="{'hide' : letter!=currentLetter }"
             :columnObjectFieldMapping = columnObjectFieldMapping
             :data-array="data"
-            :hasMoreData="hasMore"
-            linkTo="rachnakar"/>
+            :has-more-data="hasMore"
+            :link-to="linkRowsTo"/>
         </div>
     </div>
 </template>
@@ -40,6 +40,9 @@ export default {
         fromLocation: {
             type: String,
             required: true
+        },
+        linkRowsTo: {
+            type:String,
         },
         columnObjectFieldMapping: {
             type: Object,

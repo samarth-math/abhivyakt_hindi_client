@@ -15,7 +15,8 @@
         section-header="Browse Poems">
         <lettered-paginated-table
         from-location="kavita/startCharacter"
-        :columnObjectFieldMapping="{'kavita':'title'}"/>
+        link-rows-to="kavita"
+        :column-object-field-mapping="{'kavita':'title'}"/>
         </base-page-section>
 
         <page-section-with-tile
