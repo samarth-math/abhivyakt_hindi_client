@@ -14,6 +14,7 @@
             :class="{'hide' : letter!=currentLetter }"
             :columnObjectFieldMapping = columnObjectFieldMapping
             :data-array="data"
+            :hasMoreData="hasMore"
             linkTo="rachnakar"/>
         </div>
     </div>
@@ -30,7 +31,9 @@ export default {
     mixins: [featuredObject],
     data() {
         return {
-            currentLetter:""
+            currentLetter:"",
+            hasMore: false,
+            nextItemURL:""
         }
     },
     props: {
@@ -108,8 +111,12 @@ export default {
             this.currentLetter = letter
         },
         handleFetchedContent: function(responseData) {//Overriding original function
-            console.log("calling lettered paginated table handleFetchedContent")
-            this.alphabets[this.currentLetter] = responseData.content
+            this.alphabets[this.currentLetter] = this.alphabets[this.currentLetter].concat(responseData.content)
+            this.hasMore = responseData.hasMore,
+            this.nextItemURL = responseData.nextItem
+        },
+        fetchMoreContent: function() {
+            this.fetchContent(this.nextItemURL)
         },
         isActive(letter) {
             return this.currentLetter == letter

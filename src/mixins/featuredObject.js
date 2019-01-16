@@ -18,7 +18,6 @@ var featuredObject = {
                 });
         },
         handleFetchedContent: function(responseData) {
-            console.log("calling featured object handleFetchedContent")
             this.loadedContent = responseData.content
             this.isContentLoaded = true
         }

@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(art, rowIndex) in this.currentPageDataSlice" column
+            <tr v-for="(art, rowIndex) in currentPageDataSlice" column
             :key="rowIndex"
             :class="{'bottom-border': isNotLastRow(rowIndex)}">
                 <td>{{rowIndex+1}}</td>
@@ -18,7 +18,7 @@
                     <span v-else>{{$_DataTable_generateObjectFields(art, field)}}</span>
                     </td>
             </tr>
-            <tr v-for="i in this.currentPageRemainingEmptyRows" 
+            <tr v-for="i in currentPageRemainingEmptyRows"
             :key="i + 'empty'">
                 <td>-</td>
                 <td v-for="field in columnObjectFieldMapping" :key="field">-</td>
@@ -26,12 +26,14 @@
         </tbody>
     </table> 
   <ul class="pagination justify-content-center pagination-sm">
+      <!--using class hidden instead of v-show because v-show toggles the
+      display property which affects spacing, hidden still renders but hides-->
     <li class="page-item page-link"
-    :class="{'hidden': this.currentPage==1}" 
+    :class="{'hidden': currentPage==1}"
     @click="prevPage()">
       &lt;
     </li>
-    <li v-for="i in this.totalPages"
+    <li v-for="i in totalPages"
     :key="i"
     :class="{'active': isActive(i)}"
     @click="goToPage(i)"
@@ -39,7 +41,7 @@
       {{i}}
     </li>
     <li class="page-item page-link"
-    :class="{'hidden': this.currentPage==this.totalPages}"
+    :class="{'hidden': !isNextPagesShown}"
     @click="nextPage()">
       &gt;
     </li>
@@ -73,6 +75,10 @@ export default {
         },
         linkTo: {
             type: String
+        },
+        hasMoreData: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -81,6 +87,9 @@ export default {
         },
         currentPageDataSlice: function() {
             return this.dataArray.slice((this.currentPage-1)*this.pageSize,this.currentPage*this.pageSize)
+        },
+        isNextPagesShown: function() {
+            return (this.currentPage!=this.totalPages || this.hasMoreData)
         },
         currentPageRemainingEmptyRows() {
             return Math.max(0, this.pageSize - this.currentPageDataSlice.length)
@@ -96,6 +105,9 @@ export default {
         nextPage: function() {
             if (this.currentPage+1 <= this.totalPages){
                 this.currentPage++
+            }
+            else {
+                this.$parent.fetchMoreContent()
             }
         },
         prevPage: function() {
@@ -117,6 +129,7 @@ export default {
 <style scoped>
 .pagination {
     margin-top: 0px;
+    flex-wrap: wrap;
 }
 
 .page-link:hover {
