@@ -1,5 +1,5 @@
 <template>
-    <div class="col center-it">
+    <div class="col center-it tile">
         <router-link v-if="imageLink" :to=imageLink>
         <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
         <br/>{{imgName}}
@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style scoped>
+.tile:hover {
+    background-color: var(--lightgrey)
+}
 
 img.icon {
     border-radius: 50%;

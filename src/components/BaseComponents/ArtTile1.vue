@@ -48,6 +48,9 @@ export default {
 .tile {
     border-right: 1.5px solid var(--golden);
 }
+.tile:hover {
+    background-color: var(--lightgrey)
+}
 .tile .type {
     color: var(--pink);
     font-size: 1rem;

@@ -15,9 +15,8 @@
             @click="rowClicked(art._id.$oid)">
                 <td>{{rowIndex+1}}</td>
                 <td v-for="field in columnObjectFieldMapping" :key="field">
-                    <router-link v-if="linkTo" :to="linkTo + '/' + art._id.$oid">{{$_DataTable_generateObjectFields(art, field)}}</router-link>
-                    <span v-else>{{$_DataTable_generateObjectFields(art, field)}}</span>
-                    </td>
+                        {{$_DataTable_generateObjectFields(art, field)}}
+                </td>
             </tr>
             <tr v-for="i in currentPageRemainingEmptyRows"
             :key="i + 'empty'">

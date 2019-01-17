@@ -43,6 +43,9 @@ export default {
 .tile {
     border-right: 1.75px solid var(--golden);
 }
+.tile:hover {
+    background-color: var(--lightgrey)
+}
 .tile .title {
     font-size: 1rem;
 }
