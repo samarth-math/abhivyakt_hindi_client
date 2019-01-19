@@ -8,6 +8,11 @@ import KahaniHomePage from "@/components/KahaniComponents/KahaniHomePage"
 import KahaniPage from "@/components/KahaniComponents/KahaniPage"
 import RachanakarHomePage from "@/components/RachanakarComponents/RachanakarHomePage"
 import RachnakarPage from "@/components/RachanakarComponents/RachnakarPage"
+import AboutPage from "@/components/FooterComponents/AboutPage"
+import PrivacyPolicyPage from "@/components/FooterComponents/PrivacyPolicyPage";
+import TermsOfUsePage from "@/components/FooterComponents/TermsOfUsePage";
+import CopyrightPage from "@/components/FooterComponents/CopyrightPage";
+
 
 Vue.use(Router)
 
@@ -54,6 +59,30 @@ export default new Router({
       path: "/rachnakar/:id",
       name: "RachnakarPage",
       component: RachnakarPage,
+      props: true
+    },
+    {
+      path: "/about",
+      name: "AboutPage",
+      component: AboutPage,
+      props: true
+    },
+    {
+      path: "/privacy-policy",
+      name: "PrivacyPolicyPage",
+      component: PrivacyPolicyPage,
+      props: true
+    },
+    {
+      path: "/copyright",
+      name: "CopyrightPage",
+      component: CopyrightPage,
+      props: true
+    },
+    {
+      path: "/terms-of-use",
+      name: "TermsOfUsePage",
+      component: TermsOfUsePage,
       props: true
     }
   ]

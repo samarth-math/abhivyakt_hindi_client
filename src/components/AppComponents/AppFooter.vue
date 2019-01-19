@@ -6,40 +6,22 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col">
-                        <a href="#">Kavita</a>
-                        <br/> Dohe
+                        <router-link class="nav-link" to="/about">About Abhivyakt</router-link>
                     </div>
                     <div class="col">
-                        <a href="#">Kahani</a>
-                        <br/> Kahani
+                         <router-link class="nav-link" to="/privacy-policy">Privacy Policy</router-link>
                     </div>
                     <div class="col">
-                        <a href="#">Rachnakar</a>
-                        <br/> Rachnakar
+                         <router-link class="nav-link" to="/terms-of-use">Terms of Use</router-link>
                     </div>
                     <div class="col">
-                        <a href="#">Shabdkosh</a>
-                        <br/>Muhavare
+                         <router-link class="nav-link" to="/copyright">Copyright</router-link>
                     </div>
                     <div class="col">
-                        <a href="#">Collections</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <a href="#">About Abhivyakt</a>
+                         <router-link class="nav-link" to="/contact-us">Contact Us</router-link>
                     </div>
                     <div class="col">
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                    <div class="col">
-                        <a href="#">Contact Us</a>
-                    </div>
-                    <div class="col">
-                        <a href="#">Sitemap</a>
-                    </div>
-                    <div class="col">
-
+                         <router-link class="nav-link" to="/sitemap">Sitemap</router-link>
                     </div>
                 </div>
             </div>
