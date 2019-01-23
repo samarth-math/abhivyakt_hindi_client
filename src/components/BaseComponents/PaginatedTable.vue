@@ -107,7 +107,7 @@ export default {
                 this.currentPage++
             }
             else {
-                this.$parent.fetchMoreContent()
+                this.$emit('fetch-more')
             }
         },
         prevPage: function() {

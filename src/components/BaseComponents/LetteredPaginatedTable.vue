@@ -15,7 +15,8 @@
             :columnObjectFieldMapping = columnObjectFieldMapping
             :data-array="data"
             :has-more-data="hasMore"
-            :link-to="linkRowsTo"/>
+            :link-to="linkRowsTo"
+            v-on:fetch-more="fetchMoreContent()"/>
         </div>
     </div>
 </template>
