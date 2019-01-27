@@ -40,7 +40,9 @@
         from-location="spotlight"
         />
         <pink-ribbon>
-            Some stuff here
+            Subscribe to keep in touch with us. 
+            <input type="text" placeholder="Enter your email Id here..">
+            <input type="button" value="Subscribe">
         </pink-ribbon>
 
         <page-section-with-tile
