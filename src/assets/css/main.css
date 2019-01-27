@@ -29,13 +29,80 @@ a:hover {
 a:active {
     color: var(--grey);
     text-decoration: underline;
-    text-decoration-color: var(--pink);}
+    text-decoration-color: var(--pink);
+}
+
+.look-like-link:hover {
+    color: var(--grey);
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--pink);
+}
 /***** CSS Global website links *****/
 
-/* --- Start reusable elements ---*/
+/* ---Start reusable primitives ---*/
+.pre-formatted {
+    white-space:pre
+}
+
+.space-right-sm {
+    margin-right: 5px;
+}
+
+.space-left-sm {
+    margin-left: 5px;
+}
+
+.space-top-lg {
+    margin-top: 15px;
+}
+
+.space-top-sm {
+    margin-top: 5px;
+}
+
+.space-bottom-md {
+    margin-bottom: 10px;
+}
+
+.color-pink {
+    color: var(--pink);
+}
+
+.color-red {
+    color: red;
+}
 
 .hidden{
     visibility: hidden;
+}
+
+.no-padding-margin {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.no-border {
+    border: 0px;
+}
+
+
+/* ---End reusable primitives ---*/
+
+/* -- Static content CSS -- */
+
+.bold {
+    font-weight: bold
 }
 
 h3 {
@@ -79,74 +146,4 @@ h3 {
 }
 
 
-/* --- End reusable elements ---*/
-
-/* ---Start Specific Objects - possibly id'ed things-- */
-
-/* --- End Specific Objects --- */
-
-/* ---Start reusable primitives ---*/
-.space-right-sm {
-    margin-right: 5px;
-}
-
-.space-left-sm {
-    margin-left: 5px;
-}
-
-.space-top-lg {
-    margin-top: 15px;
-}
-
-.space-top-sm {
-    margin-top: 5px;
-}
-
-.space-bottom-md {
-    margin-bottom: 10px;
-}
-
-.color-pink {
-    color: var(--pink);
-}
-
-.color-red {
-    color: red;
-}
-
-.color-change-hover:hover {
-    color: #434f75;
-    cursor: pointer;
-}
-
-.no-padding-margin {
-    padding: 0px;
-    margin: 0px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
-.no-border {
-    border: 0px;
-}
-
-.center-it {
-    text-align: center;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.bold {
-    font-weight: bold
-}
-/* ---End reusable primitives ---*/
+/* --- End Static content css ---*/

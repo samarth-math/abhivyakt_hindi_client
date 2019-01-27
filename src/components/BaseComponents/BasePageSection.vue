@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row space-top-lg">
         <div class="col-12 section-heading">
             {{sectionHeader}}
         </div>
@@ -29,25 +29,14 @@ export default {
 </script>
 
 <style scoped>
-.section-margin {
-    margin: 1rem 0;
-}
 
 .section-heading {
     border-bottom: 1.75px solid var(--golden);
     border-top: 1.75px solid var(--golden);
-    margin: 1rem 0rem;
+    margin-bottom: 1rem;
     padding: 2px 0px;
     text-align: center;
 }
-
-.section-single-line-heading {
-    border-bottom: 1.75px solid var(--golden);
-    text-align: center;
-    margin: 1rem 0rem;
-    padding: 2px 0px;
-}
-
 
 .section-end {
     margin-top: 10px;

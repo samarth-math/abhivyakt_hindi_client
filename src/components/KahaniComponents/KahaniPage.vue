@@ -7,7 +7,9 @@
         v-if="loadedContent.image"
         :src="'data:image/jpeg;base64,' + imageHex"/>
         <br/>
+        <div class="pre-formatted">
         {{content}}
+        </div>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-    <div id="footer" class="row">
-        <div class="col-12 page-end section-margin">
+    <div id="footer" class="row  space-top-lg">
+        <div class="col-12 page-end">
         </div>
         <div class="container">
             <div class="col-12">

@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="center-it pink-break">
+        <div class="pink-break">
             <slot></slot>
         </div>
     </div>
@@ -22,6 +22,7 @@ export default {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     width: 100vw;
+    text-align: center;
 }
 
 .pink-break input[type="text"] {
