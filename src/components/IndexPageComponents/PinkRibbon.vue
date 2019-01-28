@@ -35,7 +35,8 @@ export default {
 
 .pink-break input[type="button"] {
     border-radius:6px;
-    padding-left:10px;
+    padding-left:20px;
+    padding-right:20px;
     margin-left: 10px;
     border: 2px solid white;
     background-color: var(--pink);

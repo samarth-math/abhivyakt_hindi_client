@@ -2,7 +2,7 @@
 <div class="row">
     <div v-if="!isSubscribed" class="col">
         Subscribe to keep in touch with us. 
-            <input type="text" v-model="email" placeholder="Enter your email Id here..">
+            <input type="text" v-model="email" placeholder="Enter your email Id here...">
             <input type="button" value="Subscribe" @click="subscribe()">
     </div>
     <div v-else class="col">
