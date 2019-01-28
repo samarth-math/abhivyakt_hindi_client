@@ -28,13 +28,13 @@ export default {
 <style>
 /** Global styles, so that all components within this element will have this property **/
 .pink-break input[type="text"] {
-    border-radius:15px;
+    border-radius:6px;
     padding-left:10px;
     margin-left: 10px;
 }
 
 .pink-break input[type="button"] {
-    border-radius:15px;
+    border-radius:6px;
     padding-left:10px;
     margin-left: 10px;
     border: 2px solid white;
