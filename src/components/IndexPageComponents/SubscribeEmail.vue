@@ -1,12 +1,12 @@
 <template>
 <div class="row">
     <div v-if="!isSubscribed" class="col">
-        Subscribe to keep in touch with us. 
-            <input type="text" v-model="email" placeholder="Enter your email Id here...">
-            <input type="button" value="Subscribe" @click="subscribe()">
+        हमें सब्सक्राइब करें 
+            <input type="text" v-model="email" placeholder="आपका ईमेल यहाँ लिखें...">
+            <input type="button" value="सब्सक्राइब" @click="subscribe()">
     </div>
     <div v-else class="col">
-        Thanks for Subscribing to our website!
+        सब्सक्राइब करने के लिए धन्यवाद्!
     </div>
 </div>
     

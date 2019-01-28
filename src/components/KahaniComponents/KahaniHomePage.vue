@@ -2,17 +2,17 @@
     <div>
         <home-page-header
         headerText="कहानी"
-        description=" A collection of stories on various themes" />
+        description="विभिन्न विषयों पर कहानियों का संग्रह" />
 
         <page-section-with-tile
-        section-header="Featured Stories"
+        section-header="विशेष कहानियां"
         :num-rows="2"
         :row-size="3"
         :tile-type="1"
         from-location="featured/kahani" />
 
         <base-page-section
-        section-header="Browse Poems">
+        section-header="अक्षरों से कहानियां ब्राउज़ करें">
 
         <lettered-paginated-table
         from-location="kahani/startCharacter"

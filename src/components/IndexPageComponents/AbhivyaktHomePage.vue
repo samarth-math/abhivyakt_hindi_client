@@ -3,15 +3,15 @@
         <div class="row">
             <box-text-on-image
             img-src="RabindranathTagore.png"
-            img-text="Gitanjali 65"
-            img-art-type="kavita"
-            img-artist="Rabindranath Tagore"/>
+            img-text="गीतांजलि"
+            img-art-type="कविता"
+            img-artist="रबीन्द्रनाथ टैगोर"/>
 
             <div class="col-sm-4 order-sm-first">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="no-padding-margin">
-                            <span class="header3  color-pink"> चुनिंदा कविताएँ</span>
+                            <span class="header3  color-pink">चुनिंदा कविताएँ</span>
                             <br/>
                             <span class="sub-heading">चाँद रोज़ और मेरी जान</span>
                             <br/>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <page-section-with-tile
-        section-header="SpotLight"
+        section-header="मुख्य आकर्षण"
         :with-section-end="true"
         :num-rows="2"
         :tile-type="1"
@@ -44,21 +44,21 @@
         </pink-ribbon>
 
         <page-section-with-tile
-        section-header="Featured Poems"
+        section-header="विशेष कवितायेँ"
         :num-rows="1"
         :row-size="5"
         :tile-type="2"
         from-location="featured/kavita"/>
         
         <page-section-with-tile
-        section-header="Featured Kahaniyaan"
+        section-header="विशेष कहानियां"
         :num-rows="1"
         :row-size="5"
         :tile-type="2"
         from-location="featured/kahani"/>
 
         <page-section-with-tile
-        section-header="FEATURED Authors"
+        section-header="विशेष रचनाकार"
         :row-size=5
         :num-rows=1
         :tile-type=3

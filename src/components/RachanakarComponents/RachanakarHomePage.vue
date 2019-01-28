@@ -4,16 +4,13 @@
         headerText="रचनाकार" />
 
         <box-image-with-text
-        text="Ramdhari Singh Dinkar was an Indian Hindi
-            poet, essayist, patriot and academic, who is
-            considered as one of the most important
-            modern Hindi poets. He remerged as a poet of
-            rebellion as a consequence of his nationalist
-            poetry written in the days before Indian
-            independence"
-        title="Ramdhari Singh Dinkar"
+        text="रामधारी सिंह दिनकर एक भारतीय हिंदी कवि, निबंधकार, देशभक्त और अकादमिक थे, 
+            जिन्हें सबसे महत्वपूर्ण आधुनिक हिंदी कवियों में से एक माना जाता है। 
+            वह भारतीय स्वतंत्रता के पहले के दिनों में लिखी गई अपनी राष्ट्रवादी कविता के 
+            परिणामस्वरूप विद्रोह के कवि के रूप में प्रतिष्ठित हुए।"
+        title="रामधारी सिंह दिनकर"
         img-src="RamdhariDinkar.png"
-        link-text="Explore his works"
+        link-text="इनकी कृतियां देखें"
         link-destination="/kahani" />
 
         <base-page-section section-header="BROWSE BY NAME">

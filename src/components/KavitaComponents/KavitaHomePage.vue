@@ -2,17 +2,17 @@
     <div>
         <home-page-header 
         headerText="कविता" 
-        description=" A collection of poems on various themes" />
+        description="विभिन्न विषयों पर कविताओं का संग्रह" />
 
         <page-section-with-tile 
-        section-header="Featured Poems"
+        section-header="विशेष कवितायेँ"
         :num-rows="2"
         :row-size="3"
         :tile-type="1"
         from-location="featured/kavita" />
 
         <base-page-section
-        section-header="Browse Poems">
+        section-header="अक्षरों से कविताएँ ब्राउज़ करें">
         <lettered-paginated-table
         from-location="kavita/startCharacter"
         link-rows-to="kavita"
