@@ -137,13 +137,5 @@ h3 {
     background-color: var(--golden);
 }
 
-.light {
-    background-color: var(--golden);
-}
-
-.dark {
-    background-color: var(--midgrey);
-}
-
 
 /* --- End Static content css ---*/

@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row space-top-lg">
         <div class="pink-break">
             <slot></slot>
         </div>
@@ -15,7 +15,6 @@ export default {
 
 <style scoped>
 .pink-break {
-    margin-top: 5px;
     padding:10px 0 10px 0;
     background-color: var(--pink);
     color: #fff;

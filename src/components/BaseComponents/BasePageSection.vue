@@ -43,7 +43,6 @@ export default {
     height: 10px;
     border-bottom: 1.75px solid var(--golden);
     border-top: 1.75px solid var(--golden);
-    margin-bottom: 10px;
 }
 
 </style>
