@@ -40,9 +40,7 @@
         from-location="spotlight"
         />
         <pink-ribbon>
-            Subscribe to keep in touch with us. 
-            <input type="text" placeholder="Enter your email Id here..">
-            <input type="button" value="Subscribe">
+            <subscribe-email/>
         </pink-ribbon>
 
         <page-section-with-tile
@@ -74,11 +72,13 @@
 import PageSectionWithTile from "../BaseComponents/PageSectionWithTile"
 import BoxTextOnImage from "./BoxTextOnImage"
 import PinkRibbon from "./PinkRibbon"
+import SubscribeEmail from "./SubscribeEmail"
 export default {
     components: {
         PageSectionWithTile,
         BoxTextOnImage,
-        PinkRibbon
+        PinkRibbon,
+        SubscribeEmail
     },
     data() {
         return {

@@ -24,7 +24,10 @@ export default {
     width: 100vw;
     text-align: center;
 }
+</style>
 
+<style>
+/** Global styles, so that all components within this element will have this property **/
 .pink-break input[type="text"] {
     border-radius:15px;
     padding-left:10px;
