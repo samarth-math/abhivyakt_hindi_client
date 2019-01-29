@@ -36,6 +36,8 @@ export default {
     margin-bottom: 1rem;
     padding: 2px 0px;
     text-align: center;
+    font-family: "Arya";
+    font-size:20px;
 }
 
 .section-end {
