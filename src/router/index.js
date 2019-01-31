@@ -12,6 +12,7 @@ import AboutPage from "@/components/FooterComponents/AboutPage"
 import PrivacyPolicyPage from "@/components/FooterComponents/PrivacyPolicyPage";
 import TermsOfUsePage from "@/components/FooterComponents/TermsOfUsePage";
 import CopyrightPage from "@/components/FooterComponents/CopyrightPage";
+import ContactUs from "@/components/FooterComponents/ContactUs";
 
 
 Vue.use(Router)
@@ -84,6 +85,12 @@ export default new Router({
       name: "TermsOfUsePage",
       component: TermsOfUsePage,
       props: true
+    },
+    {
+        path: "/contact-us",
+        name: "ContactUs",
+        component: ContactUs,
+        props: true
     }
   ]
 })
