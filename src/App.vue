@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <app-navigation-bar/>
-        <div class="container space-top-lg">
+        <div class="container min-height space-top-lg">
             <router-view/>
         </div>
         <app-footer/>
@@ -21,5 +21,7 @@ export default {
 </script>
 
 <style>
-
+.min-height {
+    min-height: 66vh;
+}
 </style>
