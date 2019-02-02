@@ -32,7 +32,7 @@ export default {
     padding: 20px;
     border-radius: 15px;
     background: var(--golden);
-    color: var(--footer-black);
+    color: var(--heading-black);
 }
 
 .homeHeader .header {
@@ -45,7 +45,7 @@ export default {
 .homeHeader hr {
     padding-top: 0;
     margin-top: 0;
-    border-top: 2px solid var(--footer-black);
+    border-top: 2px solid var(--heading-black);
 }
 
 </style>

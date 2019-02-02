@@ -1,5 +1,5 @@
 <template>
-    <div id="footer" class="row  space-top-lg">
+    <div id="footer" class="row">
         <div class="col-12 page-end">
         </div>
         <div class="container">
@@ -36,10 +36,16 @@ export default {}
 
 
 <style scoped>
+#footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .page-end {
     height: 10px;
     border-bottom: 1.5px solid var(--footer-black);
     border-top: 1.5px solid var(--footer-black);
+    margin-bottom: 15px;
 }
 
 #footer a {
