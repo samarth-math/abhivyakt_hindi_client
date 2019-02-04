@@ -28,10 +28,7 @@
                                 <router-link class="nav-link" to="/rachanakar">रचनाकार</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/dictionary">शब्दकोश</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/muhavare">मुहावरे</a>
+                                <router-link class="nav-link" to="/muhavare">मुहावरे</router-link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/dohe">दोहे</a>

@@ -14,7 +14,7 @@
             :class="{'bottom-border': isNotLastRow(rowIndex)}"
             @click="rowClicked(art._id.$oid)">
                 <td>{{rowIndex+1}}</td>
-                <td class="look-like-link" v-for="field in columnObjectFieldMapping" :key="field">
+                <td :class="{'look-like-link':linkTo}" v-for="field in columnObjectFieldMapping" :key="field">
                         {{$_DataTable_generateObjectFields(art, field)}}
                 </td>
             </tr>
@@ -186,7 +186,6 @@ export default {
 }
 
 .table tbody tr:hover {
-    cursor: pointer;
     background-color: var(--lightgrey)
 }
 
