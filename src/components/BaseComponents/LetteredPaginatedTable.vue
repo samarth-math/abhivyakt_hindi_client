@@ -2,19 +2,21 @@
     <div class="row">
         <div class="col">
             Search by : <span
-            v-for="(apiEndpoint, letter) in alphabets"
+            v-for="(data, letter) in alphabets"
             class="alphabets"
             :class="{'active': isActive(letter)}"
             :key="letter + 'a'"
             @click="changeTable(letter)"> {{letter}} </span>
 
             <paginated-table
-            v-for="(apiEndpoint, letter) in alphabets"
+            v-for="(data, letter) in alphabets"
             :key="letter"
             :class="{'hide' : letter!=currentLetter }"
             :columnObjectFieldMapping = columnObjectFieldMapping
-            :from-location="apiEndpoint"
-            :link-to="linkRowsTo"/>
+            :data-array="data"
+            :has-more-data="hasMore"
+            :link-to="linkRowsTo"
+            v-on:fetch-more="fetchMoreContent()"/>
         </div>
     </div>
 </template>
@@ -51,55 +53,55 @@ export default {
             type: Object,
             default: function() {// the format of the return object is required
                 return {
-                    अ: "",
-                    आ: "",
-                    इ: "",
-                    ई: "",
-                    उ: "",
-                    ऊ: "",
-                    ऋ: "",
-                  //  ऌ: "",
-                    ए: "",
-                    ऐ: "",
-                    ओ: "",
-                    औ: "",
-                    क: "",
-                    ख: "",
-                    ग: "",
-                    घ: "",
-                  //  ङ: "",
-                    च: "",
-                    छ: "",
-                    ज: "",
-                    झ: "",
-                 //   ञ: "",
-                    ट: "",
-                    ठ: "",
-                    ड: "",
-                    ढ: "",
-                    ण: "",
-                    त: "",
-                    थ: "",
-                    द: "",
-                    ध: "",
-                    न: "",
-                  //  ऩ: "",
-                    प: "",
-                    फ: "",
-                    ब: "",
-                    भ: "",
-                    म: "",
-                    य: "",
-                    र: "",
-                   // ऱ: "",
-                    ल: "",
-                   //ळ: "",
-                   // ऴ: "",
-                    व: "",
-                    श: "",
-                    ष: "",
-                    स: "",
-                    ह: "",
+                    अ: [],
+                    आ: [],
+                    इ: [],
+                    ई: [],
+                    उ: [],
+                    ऊ: [],
+                    ऋ: [],
+                    //ऌ: [],
+                    ए: [],
+                    ऐ: [],
+                    ओ: [],
+                    औ: [],
+                    क: [],
+                    ख: [],
+                    ग: [],
+                    घ: [],
+                    //ङ: [],
+                    च: [],
+                    छ: [],
+                    ज: [],
+                    झ: [],
+                    //ञ: [],
+                    ट: [],
+                    ठ: [],
+                    ड: [],
+                    ढ: [],
+                    ण: [],
+                    त: [],
+                    थ: [],
+                    द: [],
+                    ध: [],
+                    न: [],
+                    //ऩ: [],
+                    प: [],
+                    फ: [],
+                    ब: [],
+                    भ: [],
+                    म: [],
+                    य: [],
+                    र: [],
+                    //ऱ: [],
+                    ल: [],
+                    //ळ: [],
+                    //ऴ: [],
+                    व: [],
+                    श: [],
+                    ष: [],
+                    स: [],
+                    ह: [],
                 }
             }
         }
@@ -109,8 +111,16 @@ export default {
     },
     methods: {
         changeTable(letter) {
+            this.fetchContent(this.fromLocation + "/" + letter)
             this.currentLetter = letter
-            this.alphabets[letter] = this.fromLocation + "/" + letter
+        },
+        handleFetchedContent: function(responseData) {//Overriding original function
+            this.alphabets[this.currentLetter] = this.alphabets[this.currentLetter].concat(responseData.content)
+            this.hasMore = responseData.hasMore,
+            this.nextItemURL = responseData.nextItem
+        },
+        fetchMoreContent: function() {
+            this.fetchContent(this.nextItemURL)
         },
         isActive(letter) {
             return this.currentLetter == letter

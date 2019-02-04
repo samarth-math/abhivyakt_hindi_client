@@ -57,10 +57,7 @@ export default {
     name: "PaginatedTable",
     data() {
         return {
-            currentPage: 1,
-            hasMoreData: false,
-            nextItemURL:"",
-            dataArray: []
+            currentPage: 1
         }
     },
     mixins:[featuredObject],
@@ -72,16 +69,16 @@ export default {
             type: Number,
             default: 5
         },
+        dataArray: {
+            type: Array,
+            required: false
+        },
         linkTo: {
             type: String
         },
-        fromLocation: {
-            type: String
-        }
-    },
-    created() {
-        if (this.fromLocation!=null && this.fromLocation!=""){
-            this.fetchContent(this.fromLocation)
+        hasMoreData: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -98,22 +95,7 @@ export default {
             return Math.max(0, this.pageSize - this.currentPageDataSlice.length)
         }
     },
-    watch : {
-    // We need to use a watcher here than computed, because Vue can't really see that
-    // fetchContent modifies it's array, and koi return value daal kar use karna padega for it to recompute
-        fromLocation: function(newVal) {
-            if (newVal!=null && newVal!="") {
-                this.fetchContent(this.fromLocation)
-            }
-        }
-    },
     methods: {
-        handleFetchedContent: function(responseData) {
-            this.hasMoreData = responseData.hasMore
-            this.nextItemURL = responseData.nextItem
-            this.dataArray = this.dataArray.concat(responseData.content)
-            this.isContentLoaded = true
-        },
         goToPage: function(page){
             this.currentPage = page;
         },
@@ -125,7 +107,7 @@ export default {
                 this.currentPage++
             }
             else {
-                this.fetchContent(this.fromLocation)
+                this.$emit('fetch-more')
             }
         },
         prevPage: function() {
