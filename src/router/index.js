@@ -9,6 +9,7 @@ import KahaniPage from "@/components/KahaniComponents/KahaniPage"
 import RachanakarHomePage from "@/components/RachanakarComponents/RachanakarHomePage"
 import RachnakarPage from "@/components/RachanakarComponents/RachnakarPage"
 import MuhavareHomePage from "@/components/MuhavareComponents/MuhavareHomePage"
+import DoheHomePage from "@/components/DoheComponents/DoheHomePage"
 import AboutPage from "@/components/FooterComponents/AboutPage"
 import PrivacyPolicyPage from "@/components/FooterComponents/PrivacyPolicyPage";
 import TermsOfUsePage from "@/components/FooterComponents/TermsOfUsePage";
@@ -67,6 +68,11 @@ export default new Router({
       path: "/muhavare",
       name: "MuhavareHomePage",
       component: MuhavareHomePage
+    },
+    {
+      path: "/dohe",
+      name: "DoheHomePage",
+      component: DoheHomePage
     },
     {
       path: "/about",

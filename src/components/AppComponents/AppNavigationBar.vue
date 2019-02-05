@@ -31,7 +31,7 @@
                                 <router-link class="nav-link" to="/muhavare">मुहावरे</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/dohe">दोहे</a>
+                                <router-link class="nav-link" to="/dohe">दोहे</router-link>
                             </li>
                         </ul>
                     </div>
