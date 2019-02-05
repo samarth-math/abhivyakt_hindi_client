@@ -6,7 +6,7 @@
     sectionHeader="Browse Dohe">
         <paginated-table
         from-location="dohejs"
-        :column-object-field-mapping="{'doha':'doha', 'matlab':'meaning'}"
+        :object-column-table-column-mapping="{'doha':'doha', 'matlab':'meaning'}"
         :page-size=10
         />
     </base-page-section>

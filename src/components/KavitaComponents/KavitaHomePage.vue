@@ -16,7 +16,7 @@
         <lettered-paginated-table
         from-location="kavita/startCharacter"
         link-rows-to="kavita"
-        :column-object-field-mapping="{'kavita':'title'}"/>
+        :object-column-table-column-mapping="{'kavita':'title'}"/>
         </base-page-section>
 
         <page-section-with-tile

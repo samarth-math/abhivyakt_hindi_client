@@ -17,7 +17,7 @@
         <lettered-paginated-table
         from-location="rachnakar/startCharacter"
         link-rows-to="rachnakar"
-        :column-object-field-mapping="{'name':'name', 'birth':'birth', 'death':'death', 'gender':'gender'}"/>
+        :object-column-table-column-mapping="{'name':'name', 'birth':'birth', 'death':'death', 'gender':'gender'}"/>
         </base-page-section>
 
         <page-section-with-tile

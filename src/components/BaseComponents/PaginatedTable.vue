@@ -5,7 +5,7 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th v-for="(value, column, index) in columnObjectFieldMapping" :key="index">{{column}}</th>
+                <th v-for="(value, column, index) in objectColumnTableColumnMapping" :key="index">{{column}}</th>
             </tr>
         </thead>
         <tbody>
@@ -14,14 +14,14 @@
             :class="{'bottom-border': isNotLastRow(rowIndex)}"
             @click="rowClicked(art._id.$oid)">
                 <td>{{rowIndex+1}}</td>
-                <td :class="{'look-like-link':linkTo}" v-for="field in columnObjectFieldMapping" :key="field">
+                <td :class="{'look-like-link':linkTo}" v-for="field in objectColumnTableColumnMapping" :key="field">
                         {{$_DataTable_generateObjectFields(art, field)}}
                 </td>
             </tr>
             <tr v-for="i in currentPageRemainingEmptyRows"
             :key="i + 'empty'">
                 <td>-</td>
-                <td v-for="field in columnObjectFieldMapping" :key="field">-</td>
+                <td v-for="field in objectColumnTableColumnMapping" :key="field">-</td>
             </tr>
         </tbody>
     </table> 
@@ -65,7 +65,7 @@ export default {
     },
     mixins:[featuredObject],
     props:{
-        columnObjectFieldMapping: {
+        objectColumnTableColumnMapping: {
             type: Object
         },
         pageSize: {

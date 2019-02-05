@@ -12,7 +12,7 @@
             v-for="(apiEndpoint, letter) in alphabets"
             :key="letter"
             :class="{'hide' : letter!=currentLetter }"
-            :columnObjectFieldMapping = columnObjectFieldMapping
+            :object-column-table-column-mapping = objectColumnTableColumnMapping
             :from-location="apiEndpoint"
             :link-to="linkRowsTo"/>
         </div>
@@ -43,7 +43,7 @@ export default {
         linkRowsTo: {
             type:String,
         },
-        columnObjectFieldMapping: {
+        objectColumnTableColumnMapping: {
             type: Object,
             required: true
         },

@@ -1,12 +1,12 @@
 <template>
 <div>
     <home-page-header
-    header-text="Muhavare"/>
+    header-text="मुहावरे"/>
     <base-page-section
-    sectionHeader="Browse Muhavare">
+    sectionHeader="Browse मुहावरे">
         <paginated-table
         from-location="muhavarejs"
-        :column-object-field-mapping="{'muhavara':'muhavara', 'matlab':'meaning'}"
+        :object-column-table-column-mapping="{'muhavara':'muhavara', 'matlab':'meaning'}"
         :page-size=10
         />
     </base-page-section>

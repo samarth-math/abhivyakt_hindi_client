@@ -17,7 +17,7 @@
         <lettered-paginated-table
         from-location="kahani/startCharacter"
         link-rows-to="kahani"
-        :column-object-field-mapping="{'kahani':'title'}"/>
+        :object-column-table-column-mapping="{'kahani':'title'}"/>
         </base-page-section>
     </div>
 </template>
