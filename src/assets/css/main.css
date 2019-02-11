@@ -49,6 +49,10 @@ a:active {
     white-space:pre
 }
 
+.center-text {
+    text-align: center;
+}
+
 .space-right-sm {
     margin-right: 5px;
 }

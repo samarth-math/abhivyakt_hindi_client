@@ -55,7 +55,7 @@ export default {
             type:Number,
             default: 2,
             validator: function(value) {
-                return [1,2,3].indexOf(value) !== -1
+                return [1,2,3,4].indexOf(value) !== -1
             }
         },
         overriddenArtTypeValue: {
@@ -110,7 +110,7 @@ export default {
                         artText: art.authorName,
                         artType: artType,
                         artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
-                        artTextLink: 'rachnakar' + '/' + art.authorId.$oid,
+                        artTextLink: 'rachnakar' + '/' + (art.authorId? art.authorId.$oid : ""),
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;
@@ -119,13 +119,24 @@ export default {
                         artTitle: art.title,
                         artText: art.authorName,
                         artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
-                        artTextLink: 'rachnakar' + '/' + art.authorId.$oid,
+                        artTextLink: 'rachnakar' + '/' + (art.authorId? art.authorId.$oid : ""),
                         isLastTile: this.isLastTile(tileIndex)
                     }
                     break;
                 case 3:
                     return {
                         imgName: art.name,
+                        imageObject: art.image,
+                        imageLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid
+                    }
+                    break;
+                case 4:
+                    return {
+                        artTitle: art.title,
+                        artText: art.authorName,
+                        artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
+                        artTextLink: 'rachnakar' + '/' + (art.authorId? art.authorId.$oid : ""),
+                        isLastTile: this.isLastTile(tileIndex),
                         imageObject: art.image,
                         imageLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid
                     }

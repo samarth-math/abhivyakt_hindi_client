@@ -53,8 +53,8 @@
         <page-section-with-tile
         section-header="विशेष कहानियां"
         :num-rows="1"
-        :row-size="5"
-        :tile-type="2"
+        :row-size="3"
+        :tile-type=4
         from-location="featured/kahani"/>
 
         <page-section-with-tile

@@ -25,7 +25,7 @@
                                 <router-link class="nav-link" to="/kahani">कहानी</router-link>
                             </li>
                             <li class="nav-item">
-                                <router-link class="nav-link" to="/rachanakar">रचनाकार</router-link>
+                                <router-link class="nav-link" to="/rachnakar">रचनाकार</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link class="nav-link" to="/muhavare">मुहावरे</router-link>

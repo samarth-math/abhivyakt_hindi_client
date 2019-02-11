@@ -54,7 +54,7 @@ export default new Router({
       props: true
     },
     {
-      path: "/rachanakar",
+      path: "/rachnakar",
       name: "RachanakarHomePage",
       component: RachanakarHomePage
     },

@@ -1,9 +1,10 @@
 <template>
-    <div v-if="isContentLoaded">
+    <div v-if="isContentLoaded" class="center-text">
         <home-page-header
          :headerText="title"
          :description="author" />
-        <img 
+        <img
+        class="space-top-lg"
         v-if="loadedContent.image"
         :src="'data:image/jpeg;base64,' + imageHex"/>
         <br/>
@@ -55,3 +56,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+</style>
