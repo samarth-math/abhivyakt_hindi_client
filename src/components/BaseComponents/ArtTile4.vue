@@ -2,11 +2,9 @@
     <div class="tile col-sm" :class="{'no-border':isLastTile}">
         <div class="row">
             <div class="col-12">
-                <div class="img-box">
                     <router-link v-if="artTitleLink" :to=artTitleLink>
                         <img v-if="image" :src="'data:image/jpeg;base64,' + image"/>
                     </router-link>
-                </div>
             </div>
             <div class="col-12 title align-self-start">
                 <router-link v-if="artTitleLink" :to=artTitleLink>
@@ -74,9 +72,9 @@ export default {
 .no-border {
     border: 0px;
 }
-.img-box{
-    height: 120px;
-    width: 200px;
+img{
+    height: 180px;
+    width: 340px;
     overflow: hidden;
 }
 
