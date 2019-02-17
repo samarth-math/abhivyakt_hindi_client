@@ -9,7 +9,7 @@
                 :key="tileIndex"
                 :is="tileComponent"
                 v-bind="tileProperties(art, tileIndex)"/>
-            </div>
+        </div>
             <div class="row justify-content-center"><slot></slot>
             </div>
     </base-page-section>
@@ -111,7 +111,8 @@ export default {
                         artType: artType,
                         artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
                         artTextLink: 'rachnakar' + '/' + (art.authorId? art.authorId.$oid : ""),
-                        isLastTile: this.isLastTile(tileIndex)
+                        isLastTile: this.isLastTile(tileIndex),
+                        imageObject: art.image,
                     }
                     break;
                 case 2:
@@ -137,8 +138,7 @@ export default {
                         artTitleLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid,
                         artTextLink: 'rachnakar' + '/' + (art.authorId? art.authorId.$oid : ""),
                         isLastTile: this.isLastTile(tileIndex),
-                        imageObject: art.image,
-                        imageLink: this.$_pageSection_artTypeCalculation(art, false) + '/' + art._id.$oid
+                        imageObject: art.image
                     }
             }
             

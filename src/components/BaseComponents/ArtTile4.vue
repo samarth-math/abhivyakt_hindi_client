@@ -1,9 +1,9 @@
 <template>
-    <div class="tile col-sm" :class="{'no-border':isLastTile}">
+    <div class="tile col" :class="{'no-border':isLastTile}">
         <div class="row">
             <div class="col-12">
                     <router-link v-if="artTitleLink" :to=artTitleLink>
-                        <img v-if="image" :src="'data:image/jpeg;base64,' + image"/>
+                        <img class=".img-fluid" v-if="image" :src="'data:image/jpeg;base64,' + image"/>
                     </router-link>
             </div>
             <div class="col-12 title align-self-start">
@@ -72,12 +72,10 @@ export default {
 .no-border {
     border: 0px;
 }
-img{
+img {
+    width: 100%;
     height: 180px;
-    width: 340px;
-    overflow: hidden;
+    object-fit: cover
 }
-
 </style>
-
 

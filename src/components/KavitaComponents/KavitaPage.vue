@@ -59,7 +59,8 @@ export default {
 
 <style scoped>
 img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
 }
 </style>
