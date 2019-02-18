@@ -73,6 +73,9 @@ export default {
         position: absolute;
         bottom: 0px;
     }
+    .no-border {
+        border: 0px;
+    }
 }
 </style>
 

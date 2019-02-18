@@ -66,7 +66,8 @@ export default {
 
 <style scoped>
 .tile {
-    border-right: 1.5px solid var(--golden);
+    border-bottom: 0.1px solid var(--golden);
+    margin-top: 10px;
 }
 .tile:hover {
     background-color: var(--lightgrey)
@@ -82,7 +83,7 @@ export default {
     font-size: 0.8rem;
 }
 .no-border {
-    border: 0px;
+    border-right: 0px;
 }
 img {
     width: 100%;
@@ -90,7 +91,16 @@ img {
     object-fit: cover;
     margin-bottom: 5px;
 }
-
+@media(min-width: 576px) {
+    .tile {
+        border-right: 1.75px solid var(--golden);
+        border-bottom: 0px;
+        margin-top: 0px;
+    }
+    .no-border {
+        border-right: 0px;
+    }
+}
 </style>
 
 
