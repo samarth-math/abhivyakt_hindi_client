@@ -1,13 +1,23 @@
 <template>
     <div class="col tile">
-        <router-link v-if="imageLink" :to=imageLink>
-        <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
-        <br/>{{imgName}}
-        </router-link>
-        <span v-else>
-        <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
-        <br/>{{imgName}}
-        </span>
+        <div class="row justify-content-center">
+            <router-link v-if="imageLink" :to=imageLink>
+                <div class="col-12">
+                    <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
+                </div>
+                <div class="col-12">
+                    {{imgName}}
+                </div>
+            </router-link>
+            <span v-else>
+                <div class="col-12">
+                    <img v-if="image" class="icon img-fluid" :src="'data:image/jpeg;base64,' + image"/>
+                </div>
+                <div class="col-12">
+                    {{imgName}}
+                </div>
+            </span>
+        </div>
     </div>
 </template>
 
@@ -47,7 +57,9 @@ export default {
 
 img.icon {
     border-radius: 50%;
-    max-height: 120px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 </style>
