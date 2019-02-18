@@ -52,7 +52,9 @@ hr {
     margin-top: 0;
 }
 img {
-    max-width: 500px;
+    width: 500px;
+    height:340px;
+    object-fit: cover;
     float: right;
     margin: 0px;
     padding:0px;

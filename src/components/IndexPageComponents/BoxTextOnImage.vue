@@ -56,6 +56,8 @@ export default {
 
 .img-box img {
     max-width: 100%;
+    height: 188px;
+    object-fit: cover
 }
 
 .img-box .text-box {

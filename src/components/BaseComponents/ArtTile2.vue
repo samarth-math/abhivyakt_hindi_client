@@ -1,12 +1,12 @@
 <template>
-    <div class="tile col-sm" :class="{'no-border':isLastTile}">
-        <div class="col-sm-12 title align-self-start">
+    <div class="tile col" :class="{'no-border':isLastTile}">
+        <div class="col-12 title align-self-start">
             <router-link v-if="artTitleLink" :to=artTitleLink>
                 {{artTitle}}
             </router-link>
         </div>
         <br/>
-        <div class="col-sm-12 text align-self-end">
+        <div class="col-12 text align-self-end">
             <router-link v-if="artTextLink" :to=artTextLink>
                 {{artText}}
             </router-link>
@@ -48,7 +48,7 @@ export default {
 }
 .tile .title {
     font-size: 1rem;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .tile .text {
     font-size: 0.8rem;

@@ -1,14 +1,16 @@
 <template>
-    <div v-if="isContentLoaded" class="center-text ">
+    <div v-if="isContentLoaded">
         <home-page-header
          :headerText="title"
          :description="author" />
-        <img 
-        class="space-top-lg"
-        v-if="loadedContent.image"
-        :src="'data:image/jpeg;base64,' + imageHex"/>
-        <br/>
-        {{content}}
+        <div  class="center-text">
+            <img 
+            class="space-top-lg"
+            v-if="loadedContent.image"
+            :src="'data:image/jpeg;base64,' + imageHex"/>
+        </div>
+            <br/>
+            {{content}}
     </div>
 </template>
 

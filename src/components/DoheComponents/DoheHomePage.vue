@@ -1,7 +1,7 @@
 <template>
 <div>
     <home-page-header
-    header-text="Dohe"/>
+    header-text="दोहे"/>
     <base-page-section
     sectionHeader="Browse Dohe">
         <paginated-table
