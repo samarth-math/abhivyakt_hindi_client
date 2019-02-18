@@ -1,5 +1,5 @@
 <template>
-    <div class="tile col" :class="{'no-border':isLastTile}">
+    <div class="tile col-sm" :class="{'no-border':isLastTile}">
         <div class="row">
             <div class="col-12">
                     <router-link v-if="artTitleLink" :to=artTitleLink>

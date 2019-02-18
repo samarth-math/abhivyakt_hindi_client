@@ -1,5 +1,5 @@
 <template>
-    <div class="tile col" :class="{'no-border':isLastTile}">
+    <div class="tile col-sm" :class="{'no-border':isLastTile}">
         <div class="row no-gutters justify-content-between">
             <div class="col">
                 <span class="type">{{artType}}</span>
@@ -87,7 +87,8 @@ export default {
 img {
     width: 100%;
     height: 80px;
-    object-fit: cover
+    object-fit: cover;
+    margin-bottom: 5px;
 }
 
 </style>

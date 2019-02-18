@@ -1,5 +1,5 @@
 <template>
-    <div class="col tile">
+    <div class="col-sm tile">
         <div class="row justify-content-center">
             <router-link v-if="imageLink" :to=imageLink>
                 <div class="col-12">
