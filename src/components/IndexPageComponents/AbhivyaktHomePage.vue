@@ -39,6 +39,7 @@
         :row-size="3"
         from-location="spotlight"
         />
+
         <pink-ribbon>
             <subscribe-email/>
         </pink-ribbon>
@@ -72,12 +73,14 @@
 import PageSectionWithTile from "../BaseComponents/PageSectionWithTile"
 import BoxTextOnImage from "./BoxTextOnImage"
 import PinkRibbon from "./PinkRibbon"
+import BaseLightBox from "../BaseComponents/BaseLightBox"
 import SubscribeEmail from "./SubscribeEmail"
 export default {
     components: {
         PageSectionWithTile,
         BoxTextOnImage,
         PinkRibbon,
+        BaseLightBox,
         SubscribeEmail
     },
     data() {

@@ -57,8 +57,16 @@ a:active {
     margin-right: 5px;
 }
 
+.space-right-lg {
+    margin-right: 15px;
+}
+
 .space-left-sm {
     margin-left: 5px;
+}
+
+.space-left-lg {
+    margin-left: 15px;
 }
 
 .space-top-lg {
