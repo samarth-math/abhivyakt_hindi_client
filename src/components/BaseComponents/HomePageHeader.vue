@@ -2,9 +2,11 @@
     <div class="row">
         <div class="homeHeader col-12">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                     <span class="header">{{headerText}}</span>
-                    <hr/> {{description}}
+                </div>
+                <div class="col-12">
+                    <span class="description">{{description}}</span>
                 </div>
             </div>
         </div>
@@ -36,10 +38,16 @@ export default {
 }
 
 .homeHeader .header {
-    font-size: 30pt;
+    font-size: 40px;
+    font-family: 'Arya';
     margin-bottom: 0;
     padding-bottom: 0;
-    line-height: 1.1;
+}
+
+.homeHeader .description {
+    font-family: 'Sahitya';
+    font-size: 19px;
+    font-weight: 400px;
 }
 
 .homeHeader hr {

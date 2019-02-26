@@ -6,10 +6,9 @@
                 <div class="row">
                     <div class="col-3 bold">
                         <span class="art-header">{{imgArtType}}</span><br/>
-                        {{imgText}}
+                        <span class="art-text"> {{imgText}} </span>
                     </div>
-                    <div class="offset-5 col-4">
-                        <br/>
+                    <div class="offset-5 col-4 align-self-end">
                         <span class="art-header">{{imgArtist}}</span>
                     </div>
                 </div>
@@ -73,6 +72,12 @@ export default {
 }
 
 .art-header {
-    font-size: 0.85rem;
+    font-size: 16.5px;
+    font-family:'Arya';
+}
+
+.art-text {
+    font-size:16px;
+    font-family: 'Laila';
 }
 </style>

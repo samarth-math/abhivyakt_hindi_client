@@ -74,13 +74,17 @@ export default {
 }
 .tile .type {
     color: var(--pink);
-    font-size: 1rem;
+    font-family: 'Arya';
+    font-weight: bold;
+    font-size: 18px;
 }
 .tile .title {
-    font-size: 1rem;
+    font-size: 17px;
+    font-family: 'Sahitya';
 }
 .tile .text {
-    font-size: 0.8rem;
+    font-size: 14px;
+    font-family: 'Sahitya';
 }
 .no-border {
     border-right: 0px;

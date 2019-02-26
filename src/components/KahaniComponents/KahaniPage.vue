@@ -3,14 +3,15 @@
         <home-page-header
          :headerText="title"
          :description="author" />
-        <div  class="center-text">
+        <div class="center-text">
             <img 
             class="space-top-lg"
             v-if="loadedContent.image"
             :src="'data:image/jpeg;base64,' + imageHex"/>
         </div>
-            <br/>
+        <div class="content">
             {{content}}
+        </div>
     </div>
 </template>
 

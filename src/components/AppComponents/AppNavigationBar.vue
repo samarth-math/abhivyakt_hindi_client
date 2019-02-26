@@ -76,6 +76,8 @@ export default {
 
 .navbar-nav > li {
     padding: 0rem 1.5rem;
+    font-size: 22px;
+    font-family: 'Sahitya';
 }
 
 .navbar-light .navbar-nav .nav-link {

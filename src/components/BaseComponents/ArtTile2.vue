@@ -51,10 +51,12 @@ export default {
 }
 .tile .title {
     font-size: 1rem;
+    font-family: 'Arya';
     padding-bottom: 50px;
 }
 .tile .text {
     font-size: 0.8rem;
+    font-family: 'Sahitya';
     position: absolute;
     bottom: 10px;
 }
@@ -69,7 +71,6 @@ export default {
         margin-top: 0px;
     }
     .tile .text {
-        font-size: 0.8rem;
         position: absolute;
         bottom: 0px;
     }

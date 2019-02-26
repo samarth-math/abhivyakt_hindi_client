@@ -64,9 +64,12 @@ export default {
     background-color: var(--lightgrey)
 }
 .tile .title {
+    padding-top: 5px;
     font-size: 1rem;
+    font-family: 'Arya';
 }
 .tile .text {
+    font-family: 'Sahitya';
     font-size: 0.8rem;
 }
 .no-border {

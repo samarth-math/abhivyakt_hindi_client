@@ -53,6 +53,7 @@ export default {
 
 .tile {
     text-align: center;
+    font-family: 'Arya'
 }
 
 img.icon {
