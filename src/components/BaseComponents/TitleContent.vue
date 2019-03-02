@@ -26,6 +26,11 @@ export default {
 </script>
 
 <style scoped>
+.header3 {
+    font-family: "Arya", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
 </style>
 
 

@@ -1,36 +1,7 @@
 <template>
     <div>
-        <div class="row">
-            <box-text-on-image
-            img-src="RabindranathTagore.png"
-            img-text="गीतांजलि"
-            img-art-type="कविता"
-            img-artist="रबीन्द्रनाथ टैगोर"/>
+        <prime-timed-section/>
 
-            <div class="col-sm-4 order-sm-first">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="no-padding-margin">
-                            <span class="header3  color-pink">चुनिंदा कविताएँ</span>
-                            <br/>
-                            <span class="sub-heading">चाँद रोज़ और मेरी जान</span>
-                            <br/>
-                            <span class="sub-heading2">फ़ैज़ अहमद फ़ैज़</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="no-padding-margin">
-                            <span class="header3 color-pink"> प्रमुख रचनाकार </span>
-                            <br/>
-                            <span class="sub-heading">रामधारी सिंघ दिन्कर</span>
-                            <br/>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                    </div>
-                </div>
-            </div>
-        </div>
         <page-section-with-tile
         section-header="मुख्य आकर्षण"
         :with-section-end="true"
@@ -71,12 +42,14 @@
 
 <script>
 import PageSectionWithTile from "../BaseComponents/PageSectionWithTile"
+import PrimeTimedSection from "./PrimeTimedSection"
 import BoxTextOnImage from "./BoxTextOnImage"
 import PinkRibbon from "./PinkRibbon"
 import BaseLightBox from "../BaseComponents/BaseLightBox"
 import SubscribeEmail from "./SubscribeEmail"
 export default {
     components: {
+        PrimeTimedSection,
         PageSectionWithTile,
         BoxTextOnImage,
         PinkRibbon,

@@ -140,22 +140,6 @@ h3 {
     margin-top: 10px;
 }
 
-.header3 {
-    font-family: "Arya", sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.sub-heading {
-    font-size: 20px;
-}
-
-.sub-heading2 {
-    line-height: 1;
-    font-size: 22px;
-    color: #666;
-}
-
 .genre-tile {
     margin: 2px;
     background-color: var(--golden);
