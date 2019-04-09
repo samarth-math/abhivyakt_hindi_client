@@ -13,15 +13,15 @@
         link-text="इनकी कृतियां देखें"
         link-destination="/kahani" />
 
-        <base-page-section section-header="BROWSE BY NAME">
+        <base-page-section section-header="अक्षरों से रचनाकार ब्राउज़ करें">
         <lettered-paginated-table
         from-location="rachnakar/startCharacter"
         link-rows-to="rachnakar"
-        :object-column-table-column-mapping="{'name':'name', 'birth':'birth', 'death':'death', 'gender':'gender'}"/>
+        :object-column-table-column-mapping="{'नाम':'name', 'जन्म':'birth', 'मृत्यु':'death', 'लिंग ':'gender'}"/>
         </base-page-section>
 
         <page-section-with-tile
-        section-header="FEATURED POETS"
+        section-header="विशेष रचनाकार"
         :row-size=5
         :num-rows=1
         :tile-type=3

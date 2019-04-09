@@ -3,10 +3,10 @@
     <home-page-header
     header-text="दोहे"/>
     <base-page-section
-    sectionHeader="Browse Dohe">
+    sectionHeader="ब्राउज़ दोहे">
         <paginated-table
         from-location="dohejs"
-        :object-column-table-column-mapping="{'doha':'doha', 'matlab':'meaning'}"
+        :object-column-table-column-mapping="{'दोहा':'doha', 'मतलब':'meaning'}"
         :page-size=10
         />
     </base-page-section>

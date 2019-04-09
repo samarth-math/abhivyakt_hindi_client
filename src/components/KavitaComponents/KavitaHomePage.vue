@@ -16,11 +16,11 @@
         <lettered-paginated-table
         from-location="kavita/startCharacter"
         link-rows-to="kavita"
-        :object-column-table-column-mapping="{'kavita':'title'}"/>
+        :object-column-table-column-mapping="{'कविता':'title'}"/>
         </base-page-section>
 
         <page-section-with-tile
-        section-header="FEATURED POETS"
+        section-header="विशेष रचनाकार"
         :row-size=5
         :num-rows=1
         :tile-type=3

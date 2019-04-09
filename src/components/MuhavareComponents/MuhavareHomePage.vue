@@ -3,10 +3,10 @@
     <home-page-header
     header-text="मुहावरे"/>
     <base-page-section
-    sectionHeader="Browse मुहावरे">
+    sectionHeader="ब्राउज़ मुहावरे">
         <paginated-table
         from-location="muhavarejs"
-        :object-column-table-column-mapping="{'muhavara':'muhavara', 'matlab':'meaning'}"
+        :object-column-table-column-mapping="{'मुहावरा':'muhavara', 'मतलब':'meaning'}"
         :page-size=10
         />
     </base-page-section>

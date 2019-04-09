@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col">
-            Search by : <span
+            अक्षरों से ढूंढें: <span
             v-for="(apiEndpoint, letter) in alphabets"
             class="alphabets"
             :class="{'active': isActive(letter)}"
