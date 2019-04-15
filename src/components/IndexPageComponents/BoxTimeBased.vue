@@ -14,7 +14,7 @@
                 <div class="no-padding-margin">
                     <span class="header3 color-pink"> प्रमुख रचनाकार </span>
                     <br/>
-                    <span class="sub-heading">रामधारी सिंघ दिन्कर</span>
+                    <span class="sub-heading">रामधारी सिंह दिनकर</span>
                     <br/>
                 </div>
             </div>
