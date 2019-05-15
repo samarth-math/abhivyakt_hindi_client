@@ -4,17 +4,10 @@
          headerText="About Abhivyakt"
          />
         <title-content
-            description="Abhivyakt is a free website abhivyakt.com with the objective of promoting and disseminating Hindi literature,
-            to an audience beyond those conversant with the Devnagri script.
-            The content is available in Devanagari and Roman scripts."
-        />
-        <title-content 
-         description="This resource provides the works of the highest number of poets compared to any other site in this genre.
-         The site is the largest online repository of Hindi poetry anywhere."
-        />
-        <title-content
-        description="The site has recently been made responsive which would enable users across all platforms including desktop and laptop computers,
-        tablets as well as mobile phones to view and navigate the site with equal ease which would enable users even in remote locations to access the website."
+            description="अभिव्यक्त भारतीय कला और साहित्य को लोकप्रिय बनाने का एक मंच है।
+            आज यह दावा करना गलत नहीं होगा कि हम जो भी किताबें पढ़ते हैं, उनमें से अधिकांश कविताएँ हम उद्धृत करते हैं, जिन महान चित्रों को हम जानते हैं वे पश्चिमी हैं और हमारी बातचीत - अंग्रेजी।
+            इसका मतलब यह नहीं है कि पश्चिमी कृतियों की वैश्विक अपील उचित नहीं है, लेकिन साथ ही हम साहित्य और भारतीय कला के प्रति अनजान हैं।
+            यही इस उद्यम का उद्देश्य है – भारतीय संस्कृति के छिपे हुए रत्नों को हमारे भारतीयों तथा दुनिया के सामने लाने में मदद करने के लिए।"
         />
     </div>
 </template>
