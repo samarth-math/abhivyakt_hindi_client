@@ -2,9 +2,7 @@
     <div id="app">
         <app-navigation-bar/>
         <div class="container min-height space-top-lg">
-        <keep-alive>
             <router-view/>
-        </keep-alive>
         </div>
         <app-footer/>
     </div>
