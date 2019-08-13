@@ -2,19 +2,19 @@
     <div class="row">
         <div class="col">
             अक्षरों से ढूंढें: <span
-            v-for="(apiEndpoint, letter) in alphabets"
-            class="alphabets"
-            :class="{'active': isActive(letter)}"
-            :key="letter + 'a'"
-            @click="changeTable(letter)"> {{letter}} </span>
+            v-for="(apiEndpoint, tab) in tabs"
+            class="tabs"
+            :class="{'active': isActive(tab)}"
+            :key="tab + 'a'"
+            @click="changeTable(tab)"> {{tab}} </span>
 
             <paginated-table
-            v-for="(apiEndpoint, letter) in alphabets"
-            :key="letter"
-            :class="{'hide' : letter!=currentLetter }"
+            v-for="(apiEndpoint, tab) in tabs"
+            :key="tab"
+            :class="{'hide' : tab!=currentTab }"
             :object-column-table-column-mapping = objectColumnTableColumnMapping
             :from-location="apiEndpoint"
-            :link-to="linkRowsTo"/>
+            :link-to="rowLinkTo"/>
         </div>
     </div>
 </template>
@@ -22,6 +22,8 @@
 <script>
 import featuredObject from "../../mixins/featuredObject.js"
 import PaginatedTable from "./PaginatedTable"
+import {ObjectEnglishEnum} from "../../mixins/staticVariables"
+
 export default {
     name: "LetteredPaginatedTable",
     components: {
@@ -30,7 +32,7 @@ export default {
     mixins: [featuredObject],
     data() {
         return {
-            currentLetter:"",
+            currentTab:"",
             hasMore: false,
             nextItemURL:""
         }
@@ -42,12 +44,13 @@ export default {
         },
         linkRowsTo: {
             type:String,
+            default: 'TAB'
         },
         objectColumnTableColumnMapping: {
             type: Object,
             required: true
         },
-        alphabets: {
+        tabs: {
             type: Object,
             default: function() {// the format of the return object is required
                 return {
@@ -105,15 +108,24 @@ export default {
         }
     },
     created() {
-        this.changeTable(Object.keys(this.alphabets)[0])//First key in alphabets
+        this.changeTable(Object.keys(this.tabs)[0])//First key in tabs
+    },
+    computed: {
+        'rowLinkTo' : function() {
+            if (this.linkRowsTo=="TAB"){
+                const englishWord = str(ObjectEnglishEnum[this.currentTab])
+                return englishWord.charAt(0).toUpperCase() + englishWord.slice(1) + 'Page'
+            }
+            return this.linkRowsTo
+        }
     },
     methods: {
-        changeTable(letter) {
-            this.currentLetter = letter
-            this.alphabets[letter] = this.fromLocation + "/" + letter
+        changeTable(tab) {
+            this.currentTab = tab
+            this.tabs[tab] = this.fromLocation + "/" + tab
         },
-        isActive(letter) {
-            return this.currentLetter == letter
+        isActive(tab) {
+            return this.currentTab == tab
         }
     }
 }
@@ -124,18 +136,18 @@ export default {
     display: none;
 }
 
-.alphabets {
+.tabs {
     padding: 3px;
     font-weight: bold;
 }
 
-.alphabets:hover {
+.tabs:hover {
     color: #ffffff;
     background-color: var(--lightpink);
     cursor: pointer;
 }
 
-.alphabets.active {
+.tabs.active {
     color: #ffffff;
     background-color: var(--pink);
 }

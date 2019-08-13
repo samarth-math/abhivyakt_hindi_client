@@ -138,7 +138,7 @@ export default {
         },
         rowClicked: function(recordId) {
             if (this.linkTo){
-                this.$router.push(this.linkTo + '/' + recordId)
+                this.$router.push({ name: this.linkTo, params: { id: recordId }})
             }
         },
         $_DataTable_generateObjectFields(art, field) {

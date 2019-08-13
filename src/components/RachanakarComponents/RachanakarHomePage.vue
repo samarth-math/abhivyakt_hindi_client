@@ -16,7 +16,7 @@
         <base-page-section section-header="अक्षरों से रचनाकार ब्राउज़ करें">
         <lettered-paginated-table
         from-location="rachnakar/startCharacter"
-        link-rows-to="rachnakar"
+        link-rows-to="RachnakarPage"
         :object-column-table-column-mapping="{'नाम':'name'}"/>
         </base-page-section>
 

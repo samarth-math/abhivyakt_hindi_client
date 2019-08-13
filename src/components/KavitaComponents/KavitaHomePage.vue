@@ -15,7 +15,7 @@
         section-header="अक्षरों से कविताएँ ब्राउज़ करें">
         <lettered-paginated-table
         from-location="kavita/startCharacter"
-        link-rows-to="kavita"
+        link-rows-to="KavitaPage"
         :object-column-table-column-mapping="{'कविता':'title'}"/>
         </base-page-section>
 
