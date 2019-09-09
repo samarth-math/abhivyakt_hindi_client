@@ -113,7 +113,7 @@ export default {
     computed: {
         'rowLinkTo' : function() {
             if (this.linkRowsTo=="TAB"){
-                const englishWord = str(ObjectEnglishEnum[this.currentTab])
+                const englishWord = String(ObjectEnglishEnum[this.currentTab])
                 return englishWord.charAt(0).toUpperCase() + englishWord.slice(1) + 'Page'
             }
             return this.linkRowsTo
