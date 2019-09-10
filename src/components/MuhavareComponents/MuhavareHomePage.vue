@@ -3,7 +3,7 @@
     <home-page-header
     header-text="मुहावरे"/>
     <base-page-section
-    sectionHeader="ब्राउज़ मुहावरे">
+    sectionHeader="मुहावरे देखें">
         <paginated-table
         from-location="muhavarejs"
         :object-column-table-column-mapping="{'मुहावरा':'muhavara', 'मतलब':'meaning'}"

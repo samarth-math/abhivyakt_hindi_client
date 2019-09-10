@@ -12,7 +12,7 @@
         from-location="featured/kavita" />
 
         <base-page-section
-        section-header="अक्षरों से कविताएँ ब्राउज़ करें">
+        section-header="अक्षरों से कविताएँ  खोजें">
         <lettered-paginated-table
         from-location="kavita/startCharacter"
         link-rows-to="KavitaPage"

@@ -12,7 +12,7 @@
         from-location="featured/kahani" />
 
         <base-page-section
-        section-header="अक्षरों से कहानियां ब्राउज़ करें">
+        section-header="अक्षरों से कहानियां खोजें">
 
         <lettered-paginated-table
         from-location="kahani/startCharacter"

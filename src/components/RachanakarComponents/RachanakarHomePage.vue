@@ -13,7 +13,7 @@
         link-text="इनकी कृतियां देखें"
         link-destination="/kahani" />
 
-        <base-page-section section-header="अक्षरों से रचनाकार ब्राउज़ करें">
+        <base-page-section section-header="अक्षरों से रचनाकार खोजें">
         <lettered-paginated-table
         from-location="rachnakar/startCharacter"
         link-rows-to="RachnakarPage"

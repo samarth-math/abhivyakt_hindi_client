@@ -7,7 +7,7 @@
         />
         <br />
         {{loadedContent.biography}}
-        <base-page-section section-header="अक्षरों से रचनाकार ब्राउज़ करें">
+        <base-page-section section-header="अक्षरों से रचनाकार खोजें">
             <lettered-paginated-table
                 :from-location="rachnakarContentApiEndpoint"
                 :tabs="tabObject"
