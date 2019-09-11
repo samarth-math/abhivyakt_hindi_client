@@ -6,7 +6,12 @@
             :src="'data:image/jpeg;base64,' + imageHex"
         />
         <br />
-        {{loadedContent.biography}}
+        <p v-if="loadedContent.biography">
+            {{loadedContent.biography}}
+        </p>
+        <p v-else>
+            अभी सत्य का अन्वेषण जारी है
+        </p>
         <base-page-section section-header="अक्षरों से रचनाकार खोजें">
             <lettered-paginated-table
                 :from-location="rachnakarContentApiEndpoint"
