@@ -20,8 +20,7 @@ import ContactUs from "@/components/FooterComponents/ContactUs";
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: "/hello",
       name: "HelloWorld",
       component: HelloWorld
@@ -78,7 +77,6 @@ export default new Router({
       path: "/about",
       name: "AboutPage",
       component: AboutPage,
-      props: true
     },
     {
       path: "/privacy-policy",
@@ -99,10 +97,10 @@ export default new Router({
       props: true
     },
     {
-        path: "/contact-us",
-        name: "ContactUs",
-        component: ContactUs,
-        props: true
+      path: "/contact-us",
+      name: "ContactUs",
+      component: ContactUs,
+      props: true
     }
   ]
 })

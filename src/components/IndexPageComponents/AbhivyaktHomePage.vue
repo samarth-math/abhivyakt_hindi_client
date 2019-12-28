@@ -1,42 +1,45 @@
 <template>
     <div>
-        <prime-timed-section/>
+        <prime-timed-section />
 
         <page-section-with-tile
-        section-header="मुख्य आकर्षण"
-        :with-section-end="true"
-        :num-rows="2"
-        :tile-type="1"
-        :row-size="3"
-        from-location="spotlight"
+            section-header="मुख्य आकर्षण"
+            :with-section-end="true"
+            :num-rows="2"
+            :tile-type="1"
+            :row-size="3"
+            from-location="spotlight"
         />
 
         <pink-ribbon>
-            <subscribe-email/>
+            For any suggestions, please reach out to us at <u><a href="mailto:abhivyakt.com@gmail.com">abhivyakt.com@gmail.com</a></u>
         </pink-ribbon>
 
         <page-section-with-tile
-        section-header="विशेष कवितायेँ"
-        :num-rows="1"
-        :row-size="5"
-        :tile-type="2"
-        from-location="featured/kavita"/>
-        
-        <page-section-with-tile
-        section-header="विशेष कहानियां"
-        :num-rows="1"
-        :row-size="3"
-        :tile-type=4
-        from-location="featured/kahani"/>
+            section-header="विशेष कवितायेँ"
+            :num-rows="1"
+            :row-size="5"
+            :tile-type="2"
+            from-location="featured/kavita"
+        />
 
         <page-section-with-tile
-        section-header="विशेष रचनाकार"
-        :row-size=5
-        :num-rows=1
-        :tile-type=3
-        from-location="featured/rachnakar">
+            section-header="विशेष कहानियां"
+            :num-rows="1"
+            :row-size="3"
+            :tile-type=4
+            from-location="featured/kahani"
+        />
+
+        <page-section-with-tile
+            section-header="विशेष रचनाकार"
+            :row-size=5
+            :num-rows=1
+            :tile-type=3
+            from-location="featured/rachnakar"
+        >
         </page-section-with-tile>
-        
+
     </div>
 </template>
 
